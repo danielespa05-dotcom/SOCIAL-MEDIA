@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>SIRIA — Ricambi custom · Slide 1 (cover Layout A)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --blu-siria: #162983;
+  --arancio-siria: #F09305;
+  --white: #FFFFFF;
+  --paper: #FAFAF7;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --radius: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Carlito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "hlig" 0;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 70px 50px;
+  background-color: var(--paper);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 50px;
+  width: 220px;
+  height: auto;
+}
+
+.tag-stamp {
+  align-self: flex-start;
+  background-color: var(--arancio-siria);
+  color: var(--blu-siria);
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: 52px;
+  line-height: 1.0;
+  padding: 18px 32px;
+  border-radius: var(--radius);
+  transform: rotate(-2deg);
+  margin-bottom: 44px;
+  letter-spacing: 0.02em;
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 132px;
+  line-height: 1.0;
+}
+
+.title .bl { color: var(--blu-siria); }
+.title .or { color: var(--arancio-siria); }
+
+.body {
+  margin-top: 40px;
+  font-family: 'Carlito', sans-serif;
+  font-size: 36px;
+  line-height: 1.4;
+  color: var(--text-dark);
+  max-width: 920px;
+}
+
+.arrow-deco {
+  margin-top: 32px;
+  font-family: 'Carlito', sans-serif;
+  font-size: 44px;
+  color: var(--arancio-siria);
+  letter-spacing: 0.08em;
+}
+
+.footer-row {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.handle {
+  font-family: 'Carlito', sans-serif;
+  font-size: 22px;
+  color: var(--text-muted);
+}
+
+.scorri {
+  font-family: 'Carlito', sans-serif;
+  font-size: 44px;
+  color: var(--arancio-siria);
+}
+</style>
+</head>
+<body>
+<section class="slide">
+  <img class="logo" src="../../brand/assets/logo.png" alt="Siria Autoricambi">
+
+  <div class="tag-stamp">Lo sapevi?</div>
+
+  <h1 class="title">
+    <span class="bl">I pezzi</span><br>
+    <span class="or">che nessuno</span><br>
+    <span class="bl">ha in</span><br>
+    <span class="or">catalogo.</span>
+  </h1>
+
+  <p class="body">Il pezzo difficile da trovare? Magari ce l'abbiamo noi.</p>
+
+  <div class="arrow-deco">→ → →</div>
+
+  <div class="footer-row">
+    <span class="handle">siriapd.it</span>
+    <span class="scorri">Scorri →</span>
+  </div>
+</section>
+</body>
+</html>

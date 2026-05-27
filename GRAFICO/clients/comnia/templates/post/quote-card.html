@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>COMNIA — Quote Card</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642;
+  --pastel-coral: #F5A89A;
+  --pastel-blue: #A8D8EA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 70px;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: auto;
+}
+
+.quote-mark {
+  font-weight: 900;
+  font-size: 140px;
+  color: var(--red-comnia);
+  line-height: 0.6;
+  margin-top: 120px;
+}
+
+.quote {
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-top: 40px;
+  max-width: 780px;
+}
+
+.quote .keyword {
+  color: var(--red-comnia);
+}
+
+.attribution {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.attribution .name {
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--text-dark);
+}
+
+.attribution .role {
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.photo {
+  position: absolute;
+  bottom: 0;
+  right: -40px;
+  width: 520px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.quote, .attribution { position: relative; z-index: 1; }
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="COMNIA" />
+
+  <div class="quote-mark">&laquo;</div>
+  <p class="quote">
+    Una citazione breve ma tagliente, con una
+    <span class="keyword">parola chiave</span>
+    che resta impressa.
+  </p>
+
+  <div class="attribution">
+    <div class="name">Nome Autore</div>
+    <div class="role">Ruolo · 2026</div>
+  </div>
+
+  <!-- <img class="photo" src="../../brand/assets/persona-cutout.png" alt="" /> -->
+</div>
+
+</body>
+</html>

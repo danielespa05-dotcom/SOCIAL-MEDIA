@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/export.js carosello_presa_16a_ricarica --client=siria)",
+      "Bash(sips -s format png \"/Users/danielespagnolo/Desktop/claudio codice/COPYWRITER/GRAFICO/clients/siria/export/carosello_presa_16a_ricarica/slide-04.pdf\" --out /tmp/v7-preview-slide-04.png)",
+      "mcp__claude_ai_Canva__import-design-from-url",
+      "Bash(pkill -f \"canva-png-upload\")",
+      "Bash(xargs ls -la)"
+    ]
+  }
+}

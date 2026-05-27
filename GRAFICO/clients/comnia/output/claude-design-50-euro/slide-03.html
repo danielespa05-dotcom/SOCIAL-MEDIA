@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Slide 3 — Cos'è</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-blue: #A8D8EA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.text-block {
+  margin-top: 40px;
+}
+
+.kicker {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background-color: var(--pastel-blue);
+  color: var(--text-dark);
+  padding: 8px 14px;
+  margin-bottom: 28px;
+}
+
+.lead {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.body-emotive {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 38px;
+  line-height: 1.3;
+}
+
+.keyword {
+  color: var(--red-comnia);
+  font-weight: 700;
+}
+
+.screen-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  margin-top: 32px;
+}
+
+.screen-frame {
+  width: 860px;
+  height: 600px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+}
+
+.screen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.footer {
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-size: 42px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+
+  <div class="text-block">
+    <span class="kicker">cos'è</span>
+    <h1 class="lead">Fa quello che faceva <span class="keyword">Claude Code</span>.</h1>
+    <p class="body-emotive">Senza dover aprire un <span class="keyword">terminale</span>.</p>
+  </div>
+
+  <div class="screen-wrap">
+    <div class="screen-frame">
+      <img class="screen-img" src="./screen-claude-design-03.png" alt="Claude Design chat interface">
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="arrow">▶</span>
+  </div>
+</div>
+</body>
+</html>

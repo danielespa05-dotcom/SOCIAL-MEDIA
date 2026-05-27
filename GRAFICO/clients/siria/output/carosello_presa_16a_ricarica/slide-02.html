@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>SIRIA — Presa 16A · Slide 2 (il problema)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --blu-siria: #162983;
+  --arancio-siria: #F09305;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --radius: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Carlito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "hlig" 0;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 80px;
+  background-color: var(--white);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 70px;
+  width: 220px;
+  height: auto;
+}
+
+.eyebrow {
+  font-family: 'Carlito', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--blu-siria);
+  margin-bottom: 28px;
+}
+
+.subheading {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: 78px;
+  line-height: 1.0;
+  color: var(--blu-siria);
+  margin-bottom: 50px;
+}
+
+.subheading .or { color: var(--arancio-siria); }
+
+.body-text {
+  font-family: 'Carlito', sans-serif;
+  font-size: 40px;
+  line-height: 1.45;
+  color: var(--text-dark);
+  max-width: 900px;
+}
+
+.body-text + .body-text { margin-top: 32px; }
+
+.kw-or { color: var(--arancio-siria); font-weight: 700; }
+.kw-bk { color: var(--text-dark); font-weight: 700; }
+
+.arrow-deco {
+  margin-top: 60px;
+  font-family: 'Carlito', sans-serif;
+  font-size: 56px;
+  color: var(--arancio-siria);
+  letter-spacing: 0.04em;
+}
+
+.footer-row {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-caption {
+  font-family: 'Carlito', sans-serif;
+  font-size: 24px;
+  color: var(--text-muted);
+}
+
+.badge-30 {
+  width: 200px;
+  height: auto;
+}
+</style>
+</head>
+<body>
+<section class="slide">
+  <img class="logo" src="../../brand/assets/logo.png" alt="Siria Autoricambi">
+
+  <div class="eyebrow">Il nocciolo della questione</div>
+
+  <h2 class="subheading">
+    La sicurezza<br>
+    parte <span class="or">dalla&nbsp;presa.</span>
+  </h2>
+
+  <p class="body-text">
+    Ricaricare un'auto elettrica a <span class="kw-or">16&nbsp;ampere</span>
+    significa tirare la massima potenza dalla presa
+    <span class="kw-bk">per molte ore di fila</span>.
+  </p>
+
+  <p class="body-text">
+    Una normale presa domestica, sollecitata così,
+    può <span class="kw-or">surriscaldarsi</span>—
+    e quando una presa scalda, è già un problema.
+  </p>
+
+  <div class="arrow-deco">→ → →</div>
+
+  <div class="footer-row">
+    <span class="footer-caption">siriapd.it</span>
+    <img class="badge-30" src="../../brand/assets/marchio_30anni_badge.svg" alt="30 anni Siria">
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Slide 3 — Numeri</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+  --text-muted: #888888;
+  --pastel-yellow: #F5E642;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.slide-number {
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 26px;
+  background-color: var(--pastel-yellow);
+  color: #1A1A1A;
+  padding: 10px 22px;
+  margin-bottom: 40px;
+  align-self: flex-start;
+  letter-spacing: 0.02em;
+}
+
+.intro {
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 44px;
+}
+
+.cost-table {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 44px;
+}
+
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 14px;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.cost-row .label {
+  color: #CCCCCC;
+}
+
+.cost-row .value {
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+
+.cost-row--highlight .value {
+  color: var(--red-comnia);
+  font-size: 40px;
+}
+
+.verdict {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.verdict-q {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 38px;
+}
+
+.verdict-a {
+  font-weight: 900;
+  font-size: 92px;
+  color: var(--pastel-yellow);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.footer {
+  position: absolute;
+  bottom: 60px;
+  right: 80px;
+  font-weight: 700;
+  color: var(--red-comnia);
+  font-size: 40px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="Comnia">
+  <span class="slide-number">03 / 07</span>
+  <span class="tag">Abbiamo fatto i conti</span>
+  <p class="intro">Ogni chiamata all'AI.</p>
+  <div class="cost-table">
+    <div class="cost-row">
+      <span class="label">Token per chiamata</span>
+      <span class="value">~2.500</span>
+    </div>
+    <div class="cost-row">
+      <span class="label">Costo per chiamata</span>
+      <span class="value">~5 centesimi</span>
+    </div>
+    <div class="cost-row">
+      <span class="label">Chiamate al giorno</span>
+      <span class="value">200</span>
+    </div>
+    <div class="cost-row">
+      <span class="label">Al giorno</span>
+      <span class="value">10 €</span>
+    </div>
+    <div class="cost-row">
+      <span class="label">Al mese</span>
+      <span class="value">300 €</span>
+    </div>
+    <div class="cost-row cost-row--highlight">
+      <span class="label">All'anno</span>
+      <span class="value">3.600 €</span>
+    </div>
+  </div>
+  <div class="verdict">
+    <span class="verdict-q">Un algoritmo classico?</span>
+    <span class="verdict-a">Zero.</span>
+  </div>
+  <span class="footer">▶</span>
+</div>
+</body>
+</html>

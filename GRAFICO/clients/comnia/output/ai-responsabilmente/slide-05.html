@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Slide 5 — Quando serve l'AI</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.slide-number {
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--red-comnia);
+  margin-bottom: 32px;
+  border-left: 6px solid var(--red-comnia);
+  padding-left: 18px;
+}
+
+.heading {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+}
+
+.heading .hl {
+  background-color: var(--pastel-yellow);
+  padding: 2px 12px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.sub {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.35;
+  margin-bottom: 44px;
+}
+
+.sub .bold {
+  font-weight: 700;
+}
+
+.final {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 46px;
+  line-height: 1.25;
+  padding: 28px 32px;
+  background-color: var(--text-dark);
+  color: #FFFFFF;
+  align-self: flex-start;
+  max-width: 100%;
+}
+
+.final .red {
+  color: var(--pastel-yellow);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.footer {
+  position: absolute;
+  bottom: 60px;
+  right: 80px;
+  font-weight: 700;
+  color: var(--red-comnia);
+  font-size: 40px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+  <span class="slide-number">05 / 07</span>
+  <span class="eyebrow">La regola</span>
+  <h2 class="heading">L'AI serve per capire cose che <span class="hl">non sono chiare</span>.</h2>
+  <p class="sub">Se è già tutto chiaro,<br>non ti serve l'AI.</p>
+  <div class="final">
+    Ti serve qualcuno<br>che ti dica <span class="red">no</span>.
+  </div>
+  <span class="footer">▶</span>
+</div>
+</body>
+</html>

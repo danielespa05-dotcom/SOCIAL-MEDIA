@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>4 ore libere — 01</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-dark);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.top {
+  padding-top: 48px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 92px;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+.red { color: var(--red-comnia); }
+
+.subtitle {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.subtitle strong {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  background: #111111;
+  flex-shrink: 0;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.scorri {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.scorri .arrow {
+  color: var(--red-comnia);
+  font-style: normal;
+  margin-left: 6px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="Comnia">
+
+  <div class="top">
+    <div class="title"><span class="red">4 ore</span><br>libere.</div>
+    <p class="subtitle">
+      Se l'AI ti fa fare in <strong>4 ore</strong> quello che prima<br>
+      ti prendeva una giornata intera<br>
+      cosa ci fai con <strong>le altre 4?</strong>
+    </p>
+  </div>
+
+  <div class="image-wrapper">
+    <img src="./maxresdefault.jpg" alt="Pillola blu o rossa">
+  </div>
+
+  <div class="bottom">
+    <p class="scorri">Scorri e scegli<span class="arrow">▶</span></p>
+  </div>
+</div>
+</body>
+</html>

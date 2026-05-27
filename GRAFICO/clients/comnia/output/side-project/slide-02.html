@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --white: #FFFFFF;
+  --bubble-dark: #1A1A1A;
+  --pastel-yellow: #F5E642;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Montserrat',sans-serif; -webkit-font-smoothing:antialiased; background:var(--bg-warm); }
+.slide {
+  width:1080px; height:1350px;
+  background:var(--bg-warm); color:var(--text-dark);
+  position:relative; overflow:hidden;
+  padding:60px;
+  display:flex; flex-direction:column;
+}
+.logo {
+  position:absolute;
+  top:48px; right:60px;
+  width:88px; height:auto;
+}
+.accent-line {
+  width:80px; height:6px;
+  background:var(--pastel-yellow);
+  border-radius:0;
+  margin-bottom:32px;
+  align-self:center;
+}
+.content {
+  flex:1;
+  display:flex; flex-direction:column;
+  justify-content:center; align-items:center;
+  text-align:center;
+  padding-top:80px;
+}
+.title {
+  font-weight:900;
+  font-size:78px;
+  line-height:1.1;
+  letter-spacing:-0.02em;
+  color:var(--text-dark);
+  margin-bottom:36px;
+}
+.title em { color:var(--red-comnia); font-style:normal; }
+.body {
+  font-weight:400;
+  font-size:38px;
+  line-height:1.4;
+  color:var(--text-dark);
+  margin-bottom:40px;
+  max-width:920px;
+}
+.body .keyword { color:var(--red-comnia); font-weight:700; }
+.body .keyword-bold { font-weight:700; color:var(--text-dark); }
+.bubble {
+  background:var(--bubble-dark);
+  color:var(--white);
+  font-weight:700;
+  font-size:36px;
+  line-height:1.35;
+  padding:32px 40px;
+  border-radius:0;
+  text-align:center;
+  width:100%;
+  max-width:920px;
+}
+.footer {
+  text-align:center;
+  font-weight:700;
+  font-style:italic;
+  font-size:34px;
+  line-height:1.35;
+  color:var(--text-dark);
+  margin-top:auto;
+}
+.arrow { color:var(--red-comnia); font-weight:900; margin-left:8px; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+  <div class="content">
+    <div class="accent-line"></div>
+    <h1 class="title">Non è un <em>secondo lavoro.</em></h1>
+    <p class="body">È uno spazio dove <span class="keyword">sperimenti</span> senza chiedere permesso, <span class="keyword-bold">fallisci</span> senza conseguenze, costruisci qualcosa che è <span class="keyword-bold">completamente tuo</span>.</p>
+    <div class="bubble">Zero clienti. Zero permessi. Zero compromessi.</div>
+  </div>
+  <p class="footer">Il lavoro ti paga le bollette.<br>Il side project ti insegna chi sei. <span class="arrow">▶</span></p>
+</div>
+</body>
+</html>

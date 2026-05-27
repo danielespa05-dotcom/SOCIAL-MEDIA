@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>SIRIA — Presa 16A v2 · Slide 3 (Layout C body keyword)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --blu-siria: #162983;
+  --arancio-siria: #F09305;
+  --white: #FFFFFF;
+  --radius: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Carlito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "hlig" 0;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 70px 50px;
+  background-color: var(--blu-siria);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 70px;
+  width: 220px;
+  height: auto;
+}
+
+.arrow-line-top {
+  font-family: 'Carlito', sans-serif;
+  font-size: 56px;
+  color: var(--arancio-siria);
+  letter-spacing: 0.08em;
+  margin-bottom: 30px;
+}
+
+.body {
+  font-family: 'Carlito', sans-serif;
+  font-size: 44px;
+  line-height: 1.4;
+  color: var(--white);
+  max-width: 940px;
+}
+
+.body p { margin-bottom: 26px; }
+.body p:last-child { margin-bottom: 0; }
+
+.body .kw-or { color: var(--arancio-siria); font-weight: 700; }
+.body .kw-wh { color: var(--white); font-weight: 700; }
+
+.arrow-line-bot {
+  margin-top: 30px;
+  font-family: 'Carlito', sans-serif;
+  font-size: 56px;
+  color: var(--arancio-siria);
+  letter-spacing: 0.08em;
+}
+
+.footer-row {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.handle {
+  font-family: 'Carlito', sans-serif;
+  font-size: 24px;
+  color: var(--white);
+  opacity: 0.85;
+}
+
+.arrow {
+  font-family: 'Carlito', sans-serif;
+  font-size: 44px;
+  color: var(--arancio-siria);
+}
+</style>
+</head>
+<body>
+<section class="slide">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="Siria Autoricambi">
+
+  <div class="arrow-line-top">→ → →</div>
+
+  <div class="body">
+    <p>Servono <span class="kw-or">16 ampere</span> alla massima potenza, <span class="kw-wh">per molte ore di fila</span>.</p>
+    <p>Non è un'ipotesi da catalogo: <span class="kw-or">è quello che succede</span> ogni volta che si lascia un'elettrica in carica tutta la notte.</p>
+  </div>
+
+  <div class="arrow-line-bot">→ → →</div>
+
+  <div class="footer-row">
+    <span class="handle">siriapd.it</span>
+    <span class="arrow">→</span>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>SIRIA — Presa 16A v2 · Slide 2 (Layout B timbro)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --blu-siria: #162983;
+  --arancio-siria: #F09305;
+  --white: #FFFFFF;
+  --paper: #FAFAF7;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --radius: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Carlito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "hlig" 0;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 70px 50px;
+  background-color: var(--paper);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 60px;
+  width: 220px;
+  height: auto;
+}
+
+.tag-stamp {
+  align-self: flex-start;
+  background-color: var(--arancio-siria);
+  color: var(--blu-siria);
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: 56px;
+  line-height: 1.0;
+  padding: 20px 36px;
+  border-radius: var(--radius);
+  transform: rotate(-2deg);
+  margin-bottom: 50px;
+  letter-spacing: 0.02em;
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: 132px;
+  line-height: 1.0;
+  color: var(--blu-siria);
+}
+
+.title .or { color: var(--arancio-siria); }
+
+.body {
+  margin-top: 50px;
+  font-family: 'Carlito', sans-serif;
+  font-size: 32px;
+  line-height: 1.4;
+  color: var(--text-dark);
+  max-width: 920px;
+}
+
+.body strong { font-weight: 700; }
+
+.arrow-deco {
+  margin-top: 40px;
+  font-family: 'Carlito', sans-serif;
+  font-size: 44px;
+  color: var(--arancio-siria);
+  letter-spacing: 0.08em;
+}
+
+.footer-row {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.handle {
+  font-family: 'Carlito', sans-serif;
+  font-size: 22px;
+  color: var(--text-muted);
+}
+</style>
+</head>
+<body>
+<section class="slide">
+  <img class="logo" src="../../brand/assets/logo.png" alt="Siria Autoricambi">
+
+  <div class="tag-stamp">Il nocciolo</div>
+
+  <h2 class="title">La sicurezza<br>parte <span class="or">dalla presa.</span></h2>
+
+  <p class="body">Ricaricare un'auto elettrica a <strong>16 ampere</strong> significa tirare la massima potenza dalla presa <strong>per molte ore di fila</strong>. Una normale presa domestica, sollecitata così, può <strong>surriscaldarsi</strong>. E quando una presa scalda, è già un problema.</p>
+
+  <div class="arrow-deco">→ → →</div>
+
+  <div class="footer-row">
+    <span class="handle">siriapd.it</span>
+  </div>
+</section>
+</body>
+</html>

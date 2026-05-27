@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>COMNIA — CTA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --red-cta: #B71C1C;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+.logo-hero {
+  width: 180px;
+  height: auto;
+  margin-top: 40px;
+}
+
+.closing-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  max-width: 900px;
+}
+
+.closing {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.closing .keyword {
+  color: var(--red-comnia);
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--red-cta);
+  color: var(--white);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 38px;
+  padding: 26px 52px;
+  border-radius: 0;
+  letter-spacing: -0.01em;
+}
+
+.signature {
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <img class="logo-hero" src="../../brand/assets/logo-white.png" alt="COMNIA" />
+
+  <div class="closing-wrapper">
+    <p class="closing">
+      Cosa ne pensi?<br>
+      <span class="keyword">Parliamone.</span>
+    </p>
+    <a class="cta-button">Scrivici in DM</a>
+  </div>
+
+  <div class="signature">comnia.it · Padova</div>
+</div>
+
+</body>
+</html>

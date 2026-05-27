@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Slide 8 — Chiusura</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.slide-number {
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.15em;
+  color: #888888;
+}
+
+.line-1 {
+  font-weight: 900;
+  font-size: 92px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-bottom: 48px;
+}
+
+.accent-line {
+  width: 120px;
+  height: 6px;
+  background-color: var(--red-comnia);
+  margin-bottom: 48px;
+}
+
+.line-2 {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 44px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.keyword {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-style: normal;
+}
+
+.footer-mark {
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="Comnia">
+  <span class="slide-number">09 / 09</span>
+  <h2 class="line-1">Li chiamano <span class="keyword">fragili</span>.</h2>
+  <div class="accent-line"></div>
+  <p class="line-2">
+    Ho sentito ragionamenti più lucidi in quell'aula che in tutti i convegni che ho fatto quest'anno.
+  </p>
+  <span class="footer-mark">— fine —</span>
+</div>
+</body>
+</html>

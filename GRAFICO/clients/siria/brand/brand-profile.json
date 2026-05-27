@@ -1,0 +1,103 @@
+{
+  "brand": {
+    "name": "Siria Autoricambi",
+    "legalName": "S.I.RI.A. S.R.L.",
+    "tagline": "Ricambi auto all'ingrosso · dal 1996",
+    "founded": 1996,
+    "anniversary": "30 anni nel 2026",
+    "headquarters": "Saonara (PD)",
+    "website": "www.siriapd.it",
+    "instagramHandle": "siriaautoricambipadova",
+    "voice": {
+      "tone": ["competente", "diretto", "appassionato", "mai arrogante"],
+      "metaphor": "come Tiziano al banco con un cliente fidato",
+      "language": "it-IT",
+      "address": "tu (mai voi formale, mai 'gentile cliente')",
+      "avoid": [
+        "superlativi non verificabili",
+        "claim premium/eccellenza/leader",
+        "gergo supply chain",
+        "CTA aggressive",
+        "stock photo generiche",
+        "toni motivazionali da guru"
+      ]
+    }
+  },
+  "canvas": {
+    "post": { "width": 1080, "height": 1350, "aspect": "4:5" },
+    "carousel": { "width": 1080, "height": 1350, "aspect": "4:5" },
+    "story": { "width": 1080, "height": 1920, "aspect": "9:16" }
+  },
+  "colors": {
+    "_note": "HEX esatti confermati dal cliente.",
+    "blu-siria": "#162983",
+    "arancio-siria": "#F09305",
+    "white": "#FFFFFF",
+    "text-dark": "#1A1A1A",
+    "text-muted": "#6B6B6B",
+    "bg-dark": "#162983",
+    "bg-light": "#FFFFFF",
+    "accent-primary": "#F09305"
+  },
+  "typography": {
+    "_note": "Anton per titoli (display, condensed, weight 400 unico). Carlito per body (400/700, italics ok).",
+    "headingFamily": "Anton",
+    "bodyFamily": "Carlito",
+    "fallback": ["sans-serif"],
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Anton&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap",
+    "scale": {
+      "display":          { "family": "Anton",   "weight": 400, "style": "normal", "sizePx": [80, 110], "case": "uppercase",     "letterSpacing": "0",       "lineHeight": 1.0 },
+      "heading":          { "family": "Anton",   "weight": 400, "style": "normal", "sizePx": [56, 72],  "case": "uppercase",     "letterSpacing": "0",       "lineHeight": 1.05 },
+      "subheading":       { "family": "Carlito", "weight": 700, "style": "normal", "sizePx": [36, 44],  "case": "sentence_case", "letterSpacing": "0",       "lineHeight": 1.2 },
+      "bodyLarge":        { "family": "Carlito", "weight": 400, "style": "normal", "sizePx": [32, 40],  "case": "sentence_case", "letterSpacing": "0",       "lineHeight": 1.4 },
+      "bodyLargeBold":    { "family": "Carlito", "weight": 700, "style": "normal", "sizePx": [32, 40],  "case": "sentence_case", "letterSpacing": "0",       "lineHeight": 1.4 },
+      "bodyLargeEmotive": { "family": "Carlito", "weight": 700, "style": "italic", "sizePx": [32, 40],  "case": "sentence_case", "letterSpacing": "0",       "lineHeight": 1.4 },
+      "caption":          { "family": "Carlito", "weight": 400, "style": "normal", "sizePx": [22, 26],  "case": "sentence_case", "letterSpacing": "0",       "lineHeight": 1.3 },
+      "cta":              { "family": "Carlito", "weight": 700, "style": "normal", "sizePx": [32, 40],  "case": "uppercase",     "letterSpacing": "0.04em",  "lineHeight": 1.2 }
+    }
+  },
+  "layout": {
+    "paddingMinPx": 60,
+    "logoWidthPx": 110,
+    "logoOffsetPx": 40,
+    "cornerStyle": "softly-rounded",
+    "borderRadiusPx": 8,
+    "imageBorderRadiusPx": 12,
+    "note": "Spigoli leggermente arrotondati (8px default). Non spigoli vivi né arrotondamenti marcati."
+  },
+  "backgroundPolicy": {
+    "_note": "Niente sfondo di default a livello di carosello. Decisione presa post per post in base al contenuto della singola slide.",
+    "guidelines": {
+      "white": "Slide con molto testo (leggibilità), carosello informativo, foto prodotto su sfondo neutro",
+      "blu-siria": "Cover di impatto, slide hero, numeri grandi, citazioni, slide di rottura nel ritmo"
+    }
+  },
+  "assets": {
+    "_note": "Logo unico fornito (su sfondo blu integrato). Ottimale per slide blu (mimetico) e per top-corner anche su slide chiare.",
+    "logo": "brand/assets/logo.png"
+  },
+  "export": {
+    "_note": "Per Siria l'export default è PNG @2x (workflow Opzione C: pixel-perfect raster, non-editabile in Canva). Una slide statica = un file PNG separato (2160×2700px, viewport 1080×1350 @2x). Le slide con <video> restano MP4. L'upload Canva è gestito da scripts/canva-png-upload.js che rigenera i PNG internamente da HTML — questo formato vale per chi lancia export.js standalone.",
+    "format": "png",
+    "pageMode": "perSlide"
+  },
+  "businessRules": {
+    "neverCommunicateTo": ["Sardegna"],
+    "neverMentionCompetitorsByName": true,
+    "competitorsToMonitor": ["Reda Ricambi"],
+    "alwaysCopyOnApprovals": ["Tiziano Greggio"],
+    "membershipPositioning": "servizio (mai promozione)",
+    "membership": {
+      "price": "200€/anno",
+      "benefits": ["garanzia 2 anni", "sconto 10%", "nessun minimo fatturabile", "rimborso costi di ripristino"]
+    }
+  },
+  "narrativeLevers": [
+    "30 anni di attività (1996-2026)",
+    "Indipendenza vs super distributori",
+    "Dati proprietari (non TecDoc)",
+    "70.000 articoli, 500 categorie",
+    "Approccio consulenziale di Tiziano",
+    "Innovazione tecnologica (Google Lens, ricerca semantica)"
+  ]
+}

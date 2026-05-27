@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-coral: #F5A89A;
+  --divider: #D0C8BE;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Montserrat',sans-serif; -webkit-font-smoothing:antialiased; background:var(--bg-warm); }
+.slide {
+  width:1080px; height:1350px;
+  background:var(--bg-warm); color:var(--text-dark);
+  position:relative; overflow:hidden;
+  padding:60px 60px 50px 60px;
+  display:flex; flex-direction:column;
+}
+.logo {
+  position:absolute;
+  top:48px; right:60px;
+  width:88px; height:auto;
+}
+.accent-line {
+  width:80px; height:6px;
+  background:var(--pastel-coral);
+  border-radius:0;
+  margin-bottom:24px;
+}
+.header { padding-top: 30px; margin-bottom: 36px; }
+.title {
+  font-weight:900;
+  font-size:64px;
+  line-height:1.05;
+  letter-spacing:-0.02em;
+  color:var(--text-dark);
+  margin-bottom:16px;
+}
+.title em { color:var(--red-comnia); font-style:normal; }
+.intro {
+  font-weight:400;
+  font-size:28px;
+  line-height:1.35;
+  color:var(--text-muted);
+}
+.list {
+  flex:1;
+  display:flex; flex-direction:column;
+  gap: 0;
+}
+.item {
+  display:flex;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--divider);
+}
+.item:last-child { border-bottom: none; }
+.num {
+  font-weight:900;
+  font-size:64px;
+  line-height:1;
+  color:var(--red-comnia);
+  letter-spacing:-0.04em;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+.text { display:flex; flex-direction:column; gap: 6px; padding-top: 4px; }
+.label {
+  font-weight:900;
+  font-size:38px;
+  line-height:1.15;
+  letter-spacing:-0.01em;
+  color:var(--text-dark);
+}
+.desc {
+  font-weight:400;
+  font-size:26px;
+  line-height:1.35;
+  color:var(--text-muted);
+}
+.footer {
+  text-align:right;
+  font-weight:700;
+  font-style:italic;
+  font-size:34px;
+  line-height:1.35;
+  color:var(--text-dark);
+  margin-top:28px;
+}
+.arrow { color:var(--red-comnia); font-weight:900; margin-left:8px; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+
+  <div class="header">
+    <div class="accent-line"></div>
+    <h1 class="title">Cosa ti dà <em>davvero</em></h1>
+    <p class="intro">Cinque cose che il lavoro principale non può darti:</p>
+  </div>
+
+  <div class="list">
+    <div class="item">
+      <div class="num">01</div>
+      <div class="text">
+        <div class="label">Libertà di sbagliare</div>
+        <div class="desc">nessun cliente da accontentare</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="num">02</div>
+      <div class="text">
+        <div class="label">Ownership totale</div>
+        <div class="desc">ogni decisione è tua</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="num">03</div>
+      <div class="text">
+        <div class="label">Portfolio reale</div>
+        <div class="desc">mostri cosa sai fare davvero</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="num">04</div>
+      <div class="text">
+        <div class="label">Motivazione intrinseca</div>
+        <div class="desc">lavori perché vuoi, non perché devi</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="num">05</div>
+      <div class="text">
+        <div class="label">Un piano B che diventa A</div>
+        <div class="desc">costruirlo ti dà l'opzione</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer">Non serve sapere dove porta. Inizia. <span class="arrow">▶</span></p>
+</div>
+</body>
+</html>

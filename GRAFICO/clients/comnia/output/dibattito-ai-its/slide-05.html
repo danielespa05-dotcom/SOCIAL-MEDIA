@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Slide 4 — La pazzia</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+  --pastel-yellow: #F5E642;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.slide-number {
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.15em;
+  color: #888888;
+}
+
+.chip {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: var(--pastel-yellow);
+  color: #1A1A1A;
+  padding: 8px 18px;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+  align-self: flex-start;
+}
+
+.quote-mark {
+  font-weight: 900;
+  font-size: 180px;
+  color: var(--red-comnia);
+  line-height: 0.7;
+  margin-bottom: 20px;
+}
+
+.quote-text {
+  font-weight: 900;
+  font-size: 62px;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+}
+
+.keyword {
+  color: var(--red-comnia);
+}
+
+.footer {
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 22px;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-size: 34px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="Comnia">
+  <span class="slide-number">05 / 09</span>
+  <span class="chip">La pazzia</span>
+  <div class="quote-mark">&ldquo;</div>
+  <p class="quote-text">
+    AI non può sostituire la <span class="keyword">stupidità e la pazzia</span> di una persona che pensa fuori gli schemi.
+  </p>
+  <div class="footer">
+    <span>Estratto letterale — aula ITS</span>
+    <span class="arrow">▶</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>V5 — Domanda/Risposta</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-warm);
+  color: var(--text-dark);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.logo {
+  position: absolute;
+  top: 44px;
+  right: 48px;
+  width: 90px;
+  height: auto;
+  z-index: 5;
+}
+
+.row {
+  padding: 80px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.row.top {
+  border-bottom: 4px solid var(--text-dark);
+}
+
+.row.bottom {
+  background: var(--text-dark);
+  color: var(--bg-warm);
+}
+
+.label {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.row.bottom .label {
+  color: rgba(240,235,229,0.5);
+}
+
+.q-text {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 52px;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  max-width: 880px;
+}
+
+.q-text .yellow {
+  background: var(--pastel-yellow);
+  color: var(--text-dark);
+  padding: 0 10px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.a-text {
+  font-weight: 900;
+  font-size: 116px;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  text-transform: lowercase;
+}
+
+.a-text em {
+  color: var(--red-comnia);
+  font-style: normal;
+}
+
+.foot {
+  position: absolute;
+  bottom: 36px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(240,235,229,0.5);
+  letter-spacing: 0.06em;
+}
+
+.foot b {
+  color: rgba(240,235,229,0.85);
+  font-weight: 700;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+
+  <div class="row top">
+    <div class="label">La domanda</div>
+    <p class="q-text">
+      Cosa farà Comnia<br>
+      nei <span class="yellow">prossimi cinque anni?</span>
+    </p>
+  </div>
+
+  <div class="row bottom">
+    <div class="label">La risposta</div>
+    <h1 class="a-text">
+      faremo<br>
+      <em>ricerca.</em>
+    </h1>
+    <div class="foot">
+      <span><b>Nicola</b> · Comnia</span>
+      <span>comnia.it</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

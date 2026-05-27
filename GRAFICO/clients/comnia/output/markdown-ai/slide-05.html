@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Markdown AI — 05</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; -webkit-font-smoothing: antialiased; }
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-dark);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.eyebrow {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 34px;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.5);
+}
+
+.big-statement {
+  font-weight: 900;
+  font-size: 112px;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.big-statement .red { color: var(--red-comnia); }
+
+.sub-statement {
+  font-weight: 900;
+  font-size: 62px;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+.caption-text {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.62);
+}
+
+.caption-text strong {
+  color: rgba(255,255,255,0.88);
+  font-weight: 700;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+}
+
+.arrow-text {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 26px;
+  color: rgba(255,255,255,0.4);
+}
+
+.arrow-text .arrow {
+  color: var(--red-comnia);
+  font-style: normal;
+  margin-left: 6px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="Comnia">
+
+  <p class="eyebrow">
+    Le macchine non parlano la nostra lingua.<br>
+    Non "leggono" un file Markdown come lo leggiamo noi.
+  </p>
+
+  <div class="big-statement">
+    VEDONO<br><span class="red">TOKEN.</span>
+  </div>
+
+  <div class="sub-statement">SEQUENZE DI NUMERI.</div>
+
+  <p class="caption-text">
+    La struttura con i <strong># e i **grassetti**</strong><br>
+    non esiste per loro.
+  </p>
+
+  <div class="bottom">
+    <p class="arrow-text">continua<span class="arrow">▶</span></p>
+  </div>
+</div>
+</body>
+</html>

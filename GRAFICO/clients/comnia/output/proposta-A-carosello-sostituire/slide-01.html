@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+:root {
+  --bg-dark: #0A0A0A; --bg-warm: #F0EBE5; --red-comnia: #C82B2B;
+  --white: #FFFFFF; --text-dark: #1A1A1A; --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642; --pastel-coral: #F5A89A;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Montserrat',sans-serif; -webkit-font-smoothing:antialiased; background:var(--bg-dark); }
+.slide {
+  width:1080px; height:1350px; background:var(--bg-dark);
+  position:relative; overflow:hidden; padding:60px;
+  display:flex; flex-direction:column; justify-content:space-between;
+}
+.logo { position:absolute; top:48px; right:60px; width:88px; }
+.tag {
+  display:inline-block; background:var(--pastel-yellow); color:var(--text-dark);
+  font-weight:700; font-size:20px; padding:8px 20px; border-radius:0;
+  text-transform:uppercase; letter-spacing:0.05em; align-self:flex-start;
+}
+.content { display:flex; flex-direction:column; justify-content:center; flex:1; padding-top:60px; }
+.overline {
+  font-weight:700; font-size:22px; color:rgba(255,255,255,0.4);
+  letter-spacing:0.08em; text-transform:uppercase; margin-bottom:32px;
+}
+.hook {
+  font-weight:900; font-size:88px; line-height:1.05;
+  letter-spacing:-0.025em; color:var(--white); margin-bottom:36px;
+}
+.hook em { color:var(--red-comnia); font-style:normal; }
+.sub {
+  font-weight:700; font-style:italic; font-size:36px;
+  line-height:1.3; color:rgba(255,255,255,0.6);
+}
+.arrow { color:var(--red-comnia); font-size:36px; margin-left:8px; }
+.num {
+  font-weight:900; font-size:20px; color:rgba(255,255,255,0.2);
+  letter-spacing:0.05em;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <div>
+    <div class="tag">Opinione</div>
+  </div>
+  <div class="content">
+    <p class="overline">Il tema che nessuno affronta davvero</p>
+    <h1 class="hook">Tutti hanno<br>paura che<br>l'AI li<br><em>sostituisca</em>.</h1>
+    <p class="sub">Quasi nessuno si chiede<br>se vale la pena sostituirli. <span class="arrow">▶</span></p>
+  </div>
+  <p class="num">01 / 05</p>
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="Comnia">
+</div>
+</body>
+</html>

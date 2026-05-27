@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>COMNIA — Slide 06</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --red-cta: #B71C1C;
+  --white: #FFFFFF;
+  --pastel-yellow: #F5E642;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-dark);
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+.bg-glow {
+  position: absolute;
+  width: 1100px;
+  height: 1100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,43,43,0.16) 0%, rgba(200,43,43,0) 60%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.logo-hero {
+  width: 160px;
+  height: auto;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.icon-grow {
+  width: 110px;
+  height: 110px;
+  background-color: var(--pastel-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+.headline {
+  font-weight: 900;
+  font-size: 84px;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+.headline .keyword {
+  color: var(--red-comnia);
+}
+
+.subline {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 44px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 56px;
+  position: relative;
+  z-index: 2;
+}
+
+.subline .keyword {
+  color: var(--red-comnia);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--red-cta);
+  color: var(--white);
+  font-weight: 900;
+  font-style: italic;
+  font-size: 38px;
+  padding: 28px 56px;
+  letter-spacing: -0.01em;
+  border: 4px solid var(--white);
+  position: relative;
+  z-index: 2;
+}
+
+.signature {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  z-index: 2;
+}
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <div class="bg-glow"></div>
+  <img class="logo-hero" src="../../brand/assets/logo-white.png" alt="COMNIA" />
+
+  <div class="icon-grow">
+    <svg width="62" height="62" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2.2">
+      <path d="M12 22V8"/>
+      <path d="M12 8c0-3 2-6 6-6 0 3-2 6-6 6z" fill="#1A1A1A"/>
+      <path d="M12 12c0-3-2-6-6-6 0 3 2 6 6 6z" fill="#1A1A1A"/>
+    </svg>
+  </div>
+
+  <p class="headline">
+    Queste cose<br>
+    non si <span class="keyword">automatizzano.</span>
+  </p>
+
+  <p class="subline">
+    Si <span class="keyword">coltivano.</span><br>
+    O si perdono.
+  </p>
+
+  <a class="cta-button">Tu come la stai usando?</a>
+
+  <div class="signature">comnia.it · Padova</div>
+</div>
+
+</body>
+</html>

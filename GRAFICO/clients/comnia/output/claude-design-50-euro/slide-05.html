@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Slide 5 — Rudy e il mestiere</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --bubble-dark: #1A1A1A;
+  --white: #FFFFFF;
+  --pastel-yellow: #F5E642;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.address {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background-color: var(--pastel-yellow);
+  color: var(--text-dark);
+  padding: 10px 18px;
+  margin-bottom: 44px;
+  align-self: flex-start;
+}
+
+.hero {
+  font-weight: 900;
+  font-size: 74px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 48px;
+}
+
+.keyword {
+  color: var(--red-comnia);
+  font-weight: 900;
+}
+
+.keyword-bold { font-weight: 700; }
+
+.body {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.4;
+  margin-bottom: 44px;
+}
+
+.bubble {
+  background-color: var(--bubble-dark);
+  color: var(--white);
+  padding: 28px 36px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 1.15;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-size: 42px;
+  font-style: normal;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+
+  <span class="address">il mestiere</span>
+
+  <h1 class="hero">Rudy, il lavoro <span class="keyword">resta tuo</span>.</h1>
+
+  <p class="body">
+    Gusto, occhio, <span class="keyword-bold">la scelta fuori schema</span> —
+  </p>
+
+  <div class="bubble">
+    Claude non ci arriva.
+    <span class="arrow">▶</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>V2 — Trapianto</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --bubble-dark: #1A1A1A;
+  --pastel-coral: #F5A89A;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-warm);
+  color: var(--text-dark);
+  position: relative;
+  overflow: hidden;
+  padding: 100px 80px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 88px;
+  height: auto;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--pastel-coral);
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 22px;
+  padding: 8px 18px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 80px;
+  align-self: flex-start;
+}
+
+.quote-mark {
+  font-weight: 900;
+  font-size: 160px;
+  color: var(--red-comnia);
+  line-height: 0.55;
+  margin-top: 56px;
+}
+
+.quote {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin-top: 30px;
+  max-width: 880px;
+}
+
+.quote em {
+  color: var(--red-comnia);
+  font-style: normal;
+}
+
+.quote .ital {
+  font-style: italic;
+  font-weight: 900;
+}
+
+.bubble {
+  margin-top: 44px;
+  background: var(--bubble-dark);
+  color: var(--white);
+  padding: 26px 32px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 1.35;
+  align-self: flex-start;
+  max-width: 820px;
+}
+
+.attribution {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 50px;
+}
+
+.attribution .name {
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--text-dark);
+}
+
+.attribution .role {
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.attribution .site {
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+
+  <div class="tag">L'analogia</div>
+
+  <div class="quote-mark">&laquo;</div>
+  <p class="quote">
+    Mettere AI in azienda<br>
+    non è installare<br>
+    un software.<br>
+    È più simile<br>
+    a un <em>trapianto</em>.
+  </p>
+
+  <div class="bubble">
+    E rigettare un trapianto non significa<br>
+    tornare come prima. Significa stare peggio.
+  </div>
+
+  <div class="attribution">
+    <div>
+      <div class="name">Nicola</div>
+      <div class="role">Founder · Comnia · 2026</div>
+    </div>
+    <div class="site">comnia.it</div>
+  </div>
+</div>
+</body>
+</html>

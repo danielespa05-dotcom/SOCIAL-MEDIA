@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Post v2 — Neurodivergenza compatibile</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --bubble-dark: #1A1A1A;
+  --pastel-yellow: #F5E642;
+  --pastel-coral: #F5A89A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-warm);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+/* ── Colonna sinistra: testo ── */
+.col-text {
+  width: 580px;
+  height: 1350px;
+  background: var(--bg-warm);
+  padding: 60px 56px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.col-text__top {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Logo ── */
+.logo {
+  width: 82px;
+  height: auto;
+  margin-bottom: 52px;
+}
+
+/* ── Tag ── */
+.tag {
+  display: inline-block;
+  background: var(--pastel-yellow);
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 20px;
+  padding: 7px 18px;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 44px;
+  align-self: flex-start;
+}
+
+/* ── Hook ── */
+.hook {
+  font-weight: 900;
+  font-size: 74px;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+}
+
+.hook em {
+  color: var(--red-comnia);
+  font-style: normal;
+}
+
+/* ── Divider ── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #C8C0B8;
+  margin-bottom: 36px;
+}
+
+/* ── Body ── */
+.body-text {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.45;
+  color: var(--text-dark);
+  margin-bottom: 36px;
+}
+
+.body-text strong {
+  font-weight: 700;
+}
+
+/* ── Bubble ── */
+.bubble {
+  background: var(--bubble-dark);
+  color: var(--white);
+  padding: 24px 28px;
+  border-radius: 0;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.35;
+}
+
+/* ── Attribution ── */
+.attribution {
+  font-weight: 400;
+  font-size: 21px;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.attribution strong {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+/* ── Colonna destra: immagine ── */
+.col-image {
+  flex: 1;
+  height: 1350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.col-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+/* Accent bar verticale tra le colonne */
+.col-divider {
+  width: 8px;
+  height: 1350px;
+  background: var(--pastel-yellow);
+  flex-shrink: 0;
+  z-index: 3;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <!-- Colonna testo -->
+  <div class="col-text">
+    <div class="col-text__top">
+      <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+      <div class="tag">Dal blog</div>
+      <h1 class="hook">
+        L'AI non<br>
+        capirà <em>mai</em><br>
+        le menti<br>
+        neurodiver-<br>genti.
+      </h1>
+      <div class="divider"></div>
+      <p class="body-text">
+        Non è un limite temporaneo.<br>
+        È <strong>strutturale</strong>.
+      </p>
+      <div class="bubble">
+        Non comprensione.<br>
+        Compatibilità forzata.
+      </div>
+    </div>
+
+    <p class="attribution"><strong>Nicola</strong> · comnia.it</p>
+  </div>
+
+  <!-- Barra accent verticale -->
+  <div class="col-divider"></div>
+
+  <!-- Colonna immagine -->
+  <div class="col-image">
+    <img src="./neuroai.png" alt="Neurodivergenza compatibile">
+  </div>
+
+</div>
+</body>
+</html>

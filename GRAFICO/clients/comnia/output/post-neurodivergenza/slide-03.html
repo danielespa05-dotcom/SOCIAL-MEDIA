@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Post — Neurodivergenza compatibile</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --red-cta: #B71C1C;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-coral: #F5A89A;
+  --bubble-light: #E8E3DD;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--bg-warm);
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-warm);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 56px 64px 64px;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 48px;
+}
+
+.tag {
+  background: var(--pastel-coral);
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 20px;
+  padding: 8px 20px;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.logo {
+  width: 84px;
+  height: auto;
+}
+
+/* ── Hook ── */
+.hook {
+  font-weight: 900;
+  font-size: 86px;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--text-dark);
+  margin-bottom: 36px;
+}
+
+.hook em {
+  color: var(--red-comnia);
+  font-style: normal;
+}
+
+/* ── Divider ── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #C8C0B8;
+  margin-bottom: 32px;
+}
+
+/* ── Body ── */
+.body-text {
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 1.45;
+  color: var(--text-dark);
+  margin-bottom: 0;
+}
+
+.body-text strong {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* ── Spacer flessibile ── */
+.spacer { flex: 1; }
+
+/* ── Immagine centrata ── */
+.image-wrap {
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  margin-bottom: 40px;
+}
+
+.image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+/* ── CTA ── */
+.cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta-button {
+  background: var(--red-cta);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 28px;
+  padding: 20px 40px;
+  border-radius: 0;
+  border: none;
+  letter-spacing: 0;
+}
+
+.cta-url {
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="tag">Dal blog</div>
+    <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+  </div>
+
+  <!-- Hook -->
+  <h1 class="hook">
+    L'AI non capirà<br>
+    <em>mai</em> le menti<br>
+    neurodivergenti.
+  </h1>
+
+  <div class="divider"></div>
+
+  <!-- Body -->
+  <p class="body-text">
+    Non è un limite temporaneo. È <strong>strutturale</strong>.<br>
+    L'AI ottimizza sulla frequenza, non sulla verità.<br>
+    Le menti neurodivergenti sono rare nel dataset.<br>
+    Spinte ai margini <strong>non per scelta, per matematica</strong>.
+  </p>
+
+  <div class="spacer"></div>
+
+  <!-- Immagine centrata -->
+  <div class="image-wrap">
+    <img src="./neuroai.png" alt="Neurodivergenza compatibile">
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-row">
+    <div class="cta-button">Leggi l'articolo completo</div>
+    <span class="cta-url">comnia.it</span>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>SIRIA — Ricambi agricoli · Slide 4 (Layout E chiusura)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --blu-siria: #162983;
+  --arancio-siria: #F09305;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --radius: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Carlito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "hlig" 0;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 70px 40px;
+  background-color: var(--white);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 70px;
+  width: 220px;
+  height: auto;
+}
+
+.title-block {
+  text-align: center;
+}
+
+.title-line {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  font-size: 104px;
+  line-height: 1.0;
+  margin-bottom: 16px;
+}
+
+.title-line.t1 .a { color: var(--blu-siria); }
+.title-line.t1 .b { color: var(--arancio-siria); }
+.title-line.t2 { color: var(--blu-siria); }
+.title-line.t3 .a { color: var(--arancio-siria); }
+
+.site {
+  margin-top: 40px;
+  text-align: center;
+  font-family: 'Carlito', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 0.04em;
+  color: var(--blu-siria);
+}
+
+.badge-row {
+  margin-top: auto;
+  text-align: center;
+}
+
+.badge-30 {
+  width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto 14px;
+}
+
+.caption {
+  font-family: 'Carlito', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-muted);
+}
+</style>
+</head>
+<body>
+<section class="slide">
+  <img class="logo" src="../../brand/assets/logo.png" alt="Siria Autoricambi">
+
+  <div class="title-block">
+    <div class="title-line t1"><span class="a">SE VUOI UN</span> <span class="b">RICAMBIO PRECISO,</span></div>
+    <div class="title-line t2">SAI DOVE</div>
+    <div class="title-line t3"><span class="a">TROVARCI.</span></div>
+    <div class="site">siriapd.it</div>
+  </div>
+
+  <div class="badge-row">
+    <img class="badge-30" src="../../brand/assets/marchio_30anni_badge.svg" alt="30 anni Siria">
+    <div class="caption">Da 30 anni facciamo strada insieme.</div>
+  </div>
+</section>
+</body>
+</html>

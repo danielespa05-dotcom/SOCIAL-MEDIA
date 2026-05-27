@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --red-cta: #B71C1C;
+  --white: #FFFFFF;
+  --text-muted: #6B6B6B;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Montserrat',sans-serif; -webkit-font-smoothing:antialiased; background:var(--bg-dark); }
+.slide {
+  width:1080px; height:1350px;
+  background:var(--bg-dark); color:var(--white);
+  position:relative; overflow:hidden;
+  padding:60px;
+  display:flex; flex-direction:column;
+}
+.logo {
+  width:140px; height:auto;
+  margin: 30px auto 0 auto;
+  display:block;
+}
+.content {
+  flex:1;
+  display:flex; flex-direction:column;
+  justify-content:center; align-items:center;
+  text-align:center;
+  padding: 0 20px;
+}
+.hook {
+  font-weight:900;
+  font-size:84px;
+  line-height:1.05;
+  letter-spacing:-0.02em;
+  color:var(--white);
+  margin-bottom:40px;
+}
+.hook em { color:var(--red-comnia); font-style:normal; }
+.sub {
+  font-weight:400;
+  font-size:40px;
+  line-height:1.35;
+  color:rgba(255,255,255,0.85);
+  margin-bottom:64px;
+}
+.cta-button {
+  background:var(--red-cta);
+  color:var(--white);
+  font-weight:700;
+  font-style:italic;
+  font-size:42px;
+  padding:32px 56px;
+  border-radius:0;
+  text-align:center;
+  width:100%;
+  max-width:880px;
+  margin-bottom:32px;
+}
+.caption {
+  font-weight:400;
+  font-style:italic;
+  font-size:28px;
+  color:var(--text-muted);
+}
+.footer {
+  text-align:center;
+  font-weight:400;
+  font-size:22px;
+  letter-spacing:0.15em;
+  color:var(--text-muted);
+  text-transform:uppercase;
+  margin-top:40px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="Comnia">
+  <div class="content">
+    <h1 class="hook">Non serve che<br>diventi una <em>startup.</em></h1>
+    <p class="sub">Bastano 30 minuti al giorno<br>su qualcosa che ti accende.</p>
+    <div class="cta-button">E tu… ce l'hai un side project?</div>
+    <p class="caption">lascia un commento</p>
+  </div>
+  <p class="footer">COMNIA.IT &middot; PADOVA</p>
+</div>
+</body>
+</html>

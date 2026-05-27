@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Slide 6 — CTA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --red-cta: #B71C1C;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+.logo {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pastel-yellow);
+  margin-bottom: 36px;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 3px;
+  background: var(--pastel-yellow);
+  vertical-align: middle;
+}
+
+.eyebrow::before { margin-right: 18px; }
+.eyebrow::after { margin-left: 18px; }
+
+.headline {
+  font-weight: 900;
+  font-size: 88px;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin-bottom: 28px;
+  max-width: 900px;
+}
+
+.headline .keyword { color: var(--red-comnia); }
+
+.sub {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1.35;
+  margin-bottom: 56px;
+  max-width: 820px;
+  color: var(--white);
+}
+
+.cta-button {
+  background-color: var(--red-cta);
+  color: var(--white);
+  font-weight: 900;
+  font-style: italic;
+  font-size: 44px;
+  padding: 30px 64px;
+  display: inline-block;
+  letter-spacing: -0.01em;
+}
+
+.cta-meta {
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.cta-meta b {
+  color: var(--white);
+  font-weight: 900;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="Comnia">
+  <span class="eyebrow">parliamone sul serio</span>
+  <h1 class="headline">Progetti AI<br><span class="keyword">per la tua azienda</span>.</h1>
+  <p class="sub">Risparmio, privacy, sicurezza. Ti aiutiamo a scegliere lo strumento giusto, senza ideologia.</p>
+  <span class="cta-button">Scrivici</span>
+  <p class="cta-meta">→ <b>digital@comnia.it</b></p>
+</div>
+</body>
+</html>

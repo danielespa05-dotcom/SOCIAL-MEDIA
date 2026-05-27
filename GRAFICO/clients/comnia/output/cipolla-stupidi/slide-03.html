@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>COMNIA — Cipolla 03</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --white: #FFFFFF;
+  --pastel-yellow: #F5E642;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 110px 70px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+}
+
+.meta-top {
+  position: absolute;
+  top: 140px;
+  left: 70px;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.slide-number {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.accent-line {
+  width: 80px;
+  height: 6px;
+  background-color: var(--pastel-yellow);
+  margin-top: 28px;
+}
+
+.dialog {
+  margin-top: 0;
+}
+
+.line {
+  margin-bottom: 44px;
+  max-width: 940px;
+}
+
+.speaker {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 14px;
+  color: var(--text-muted);
+}
+
+.line--dev .speaker { color: var(--text-dark); }
+.line--user .speaker { color: var(--red-comnia); }
+
+.line-text {
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.line-text .italic {
+  font-style: italic;
+}
+
+.line-text .keyword {
+  color: var(--red-comnia);
+}
+
+.ticket {
+  background-color: var(--text-dark);
+  color: var(--white);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 46px;
+  padding: 26px 34px;
+  display: inline-block;
+  max-width: 900px;
+  margin-top: 8px;
+}
+
+.emotive {
+  position: absolute;
+  bottom: 80px;
+  right: 70px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 38px;
+  text-align: right;
+}
+
+.emotive .arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-style: normal;
+  margin-left: 12px;
+}
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="COMNIA" />
+
+  <div class="meta-top">
+    <div class="slide-number">03 / 06</div>
+    <div class="accent-line"></div>
+  </div>
+
+  <div>
+    <div class="dialog">
+      <div class="line line--dev">
+        <span class="speaker">Lo sviluppatore</span>
+        <p class="line-text">«È <span class="italic">intuitivo.</span>»</p>
+      </div>
+
+      <div class="line line--user">
+        <span class="speaker">L'utente</span>
+        <p class="line-text">Clicca <span class="keyword">l'unica cosa</span><br>che non doveva cliccare.</p>
+      </div>
+
+      <div class="ticket">«Non va niente.»</div>
+    </div>
+  </div>
+
+  <p class="emotive">
+    Ogni. Santo. Giorno. <span class="arrow">▶</span>
+  </p>
+</div>
+
+</body>
+</html>

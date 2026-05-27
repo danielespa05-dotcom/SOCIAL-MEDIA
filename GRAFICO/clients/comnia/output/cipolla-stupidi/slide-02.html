@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>COMNIA — Cipolla 02</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+  --pastel-coral: #F5A89A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 110px 70px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+.meta-top {
+  position: absolute;
+  top: 140px;
+  left: 70px;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.slide-number {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--white);
+  opacity: 0.55;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.accent-line {
+  width: 80px;
+  height: 6px;
+  background-color: var(--pastel-coral);
+  margin-top: 28px;
+}
+
+.display-title {
+  font-weight: 900;
+  font-size: 130px;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.display-title .keyword {
+  color: var(--red-comnia);
+}
+
+.subtext {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.3;
+  margin-top: 56px;
+  max-width: 920px;
+}
+
+.subtext .bold {
+  font-weight: 700;
+}
+
+.subtext .keyword {
+  color: var(--red-comnia);
+  font-weight: 700;
+}
+
+.emotive {
+  position: absolute;
+  bottom: 80px;
+  right: 70px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 38px;
+  text-align: right;
+}
+
+.emotive .arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-style: normal;
+  margin-left: 12px;
+}
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="COMNIA" />
+
+  <div class="meta-top">
+    <div class="slide-number">02 / 06</div>
+    <div class="accent-line"></div>
+  </div>
+
+  <div>
+    <h2 class="display-title">
+      Noi<br>
+      facciamo<br>
+      <span class="keyword">software.</span>
+    </h2>
+    <p class="subtext">
+      Questa legge è alla <span class="bold">base</span> di come progettiamo
+      ogni <span class="keyword">UI</span> dei software o app.
+    </p>
+  </div>
+
+  <p class="emotive">
+    Sempre. <span class="arrow">▶</span>
+  </p>
+</div>
+
+</body>
+</html>

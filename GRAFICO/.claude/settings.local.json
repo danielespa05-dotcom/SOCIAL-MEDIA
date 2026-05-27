@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/preview.js vale-la-pena-sostituirti)",
+      "Bash(node -e ' *)",
+      "Bash(open \"/Users/danielespagnolo/Desktop/claudio codice/COPYWRITER/GRAFICO/clients/siria/export/ig-caricabatterie-ev/ig-caricabatterie-ev.png\")"
+    ]
+  }
+}

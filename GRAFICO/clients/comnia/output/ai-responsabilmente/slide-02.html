@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Slide 2 — Analogia</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-coral: #F5A89A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.slide-number {
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 26px;
+  background-color: var(--pastel-coral);
+  color: var(--text-dark);
+  padding: 10px 22px;
+  margin-bottom: 44px;
+  align-self: flex-start;
+  letter-spacing: 0.02em;
+}
+
+.setup {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.setup-2 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.setup-3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.4;
+  margin-bottom: 56px;
+}
+
+.punchline {
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  padding: 32px 36px;
+  background-color: var(--text-dark);
+  color: #FFFFFF;
+  align-self: flex-start;
+  max-width: 100%;
+}
+
+.punchline .key {
+  color: #F5E642;
+}
+
+.keyword {
+  color: var(--red-comnia);
+  font-weight: 700;
+}
+
+.keyword-bold {
+  font-weight: 700;
+}
+
+.footer {
+  position: absolute;
+  bottom: 60px;
+  right: 80px;
+  font-weight: 700;
+  color: var(--red-comnia);
+  font-size: 40px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+  <span class="slide-number">02 / 07</span>
+  <span class="tag">Il caso</span>
+  <p class="setup">Il cliente ha i dati <span class="keyword-bold">puliti</span>.</p>
+  <p class="setup-2">Campi ordinati. Filtri che funzionano.</p>
+  <p class="setup-3">Vuole l'<span class="keyword">AI</span> per fare matching.</p>
+  <div class="punchline">
+    È come chiamare<br>un <span class="key">chirurgo</span><br>per aprire una busta.
+  </div>
+  <span class="footer">▶</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Markdown AI — 04</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --bubble-dark: #1A1A1A;
+  --white: #FFFFFF;
+  --pastel-blue: #A8D8EA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; -webkit-font-smoothing: antialiased; }
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-warm);
+  color: var(--text-dark);
+  position: relative;
+  overflow: hidden;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 36px;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--pastel-blue);
+  color: var(--text-dark);
+  font-weight: 900;
+  font-size: 26px;
+  padding: 10px 26px;
+  border-radius: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.body-text {
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.45;
+}
+
+.body-text strong {
+  font-weight: 700;
+}
+
+.body-text .red {
+  color: var(--red-comnia);
+  font-weight: 700;
+}
+
+.mono {
+  background: rgba(0,0,0,0.08);
+  padding: 2px 10px;
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.bubble {
+  background: var(--bubble-dark);
+  color: var(--white);
+  padding: 28px 36px;
+  border-radius: 0;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+}
+
+.arrow-text {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 26px;
+  color: var(--text-muted);
+}
+
+.arrow-text .arrow {
+  color: var(--red-comnia);
+  font-style: normal;
+  margin-left: 6px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+
+  <div class="tag">Adesso</div>
+
+  <div class="title">Perché ne parlano tutti adesso.</div>
+
+  <p class="body-text">
+    Perché i sistemi AI usano i <span class="red">.md</span><br>
+    per ricevere <strong>contesto strutturato</strong>.<br><br>
+    Il CLAUDE.md, il system prompt,<br>
+    la "memoria": tutto <span class="mono">.md</span>.
+  </p>
+
+  <div class="bubble">
+    "Il marketing ha preso uno strumento vecchio e lo ha riposizionato come <em>il modo per parlare con l'AI</em>."
+  </div>
+
+  <div class="bottom">
+    <p class="arrow-text">continua<span class="arrow">▶</span></p>
+  </div>
+</div>
+</body>
+</html>

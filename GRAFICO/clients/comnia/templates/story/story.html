@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>COMNIA — Story</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --red-cta: #B71C1C;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642;
+  --pastel-coral: #F5A89A;
+  --pastel-blue: #A8D8EA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #222;
+}
+
+.slide.slide--story {
+  width: 1080px;
+  height: 1920px;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 80px 140px;
+  background-color: var(--bg-dark);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: auto;
+}
+
+.tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 26px;
+  padding: 10px 22px;
+  border-radius: 0;
+  color: var(--text-dark);
+  background-color: var(--pastel-blue);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 88px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-top: 28px;
+}
+
+.title .keyword {
+  color: var(--red-comnia);
+}
+
+.body-text {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.4;
+  margin-top: 44px;
+  max-width: 900px;
+}
+
+.body-text .bold {
+  font-weight: 700;
+}
+
+.cta-text {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 40px;
+  text-align: center;
+}
+
+.cta-text .arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-style: normal;
+  margin-left: 14px;
+}
+
+.hero-block {
+  margin-top: 200px;
+}
+</style>
+</head>
+<body>
+
+<div class="slide slide--story">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="COMNIA" />
+
+  <div class="hero-block">
+    <span class="tag">Novità</span>
+    <h1 class="title">
+      Titolo<br>
+      della <span class="keyword">story</span>
+    </h1>
+    <p class="body-text">
+      Body breve che accompagna il titolo con
+      <span class="bold">un dettaglio chiaro</span>
+      e senza fronzoli.
+    </p>
+  </div>
+
+  <p class="cta-text">Swipe up per scoprire <span class="arrow">▶</span></p>
+</div>
+
+</body>
+</html>

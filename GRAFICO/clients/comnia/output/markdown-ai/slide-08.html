@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Markdown AI — 09</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --red-cta: #B71C1C;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; -webkit-font-smoothing: antialiased; }
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-warm);
+  color: var(--text-dark);
+  position: relative;
+  overflow: hidden;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 48px;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: auto;
+}
+
+.closing-title {
+  font-weight: 900;
+  font-size: 76px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.closing-title .red { color: var(--red-comnia); }
+
+.divider {
+  width: 80px;
+  height: 5px;
+  background: var(--red-comnia);
+  border-radius: 0;
+}
+
+.body-text {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.5;
+}
+
+.body-text strong {
+  font-weight: 700;
+}
+
+.cta-button {
+  background: var(--red-cta);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 36px;
+  padding: 28px 64px;
+  border-radius: 0;
+  border: none;
+  cursor: default;
+  display: inline-block;
+}
+
+.tip {
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--text-muted);
+  font-style: italic;
+  max-width: 760px;
+  line-height: 1.5;
+}
+
+.tip strong {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-style: normal;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+
+  <div class="closing-title">
+    Gli umani<br>sempre così<br><span class="red">umanocentrici.</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <p class="body-text">
+    Costruiamo strumenti per le macchine<br>
+    <strong>ottimizzati per noi</strong>.<br>
+    Poi ci stupiamo quando le macchine<br>
+    non "ci capiscono" davvero.
+  </p>
+
+  <div class="cta-button">Cosa ne pensi?</div>
+
+  <p class="tip">
+    Se stai leggendo questo come <strong>.md</strong> in VS Code:
+    premi <strong>⌘ + Shift + V</strong>. Vedrai la differenza.
+  </p>
+</div>
+</body>
+</html>

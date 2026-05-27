@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Slide 7 — La bomba</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.slide-number {
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.chip {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: var(--pastel-yellow);
+  color: var(--text-dark);
+  padding: 8px 18px;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+  align-self: flex-start;
+}
+
+.quote-mark {
+  font-weight: 900;
+  font-size: 180px;
+  color: var(--red-comnia);
+  line-height: 0.7;
+  margin-bottom: 20px;
+}
+
+.quote-text {
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.keyword {
+  color: var(--red-comnia);
+}
+
+.footer {
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-size: 34px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+  <span class="slide-number">08 / 09</span>
+  <span class="chip">La bomba</span>
+  <div class="quote-mark">&ldquo;</div>
+  <p class="quote-text">
+    L'IA <span class="keyword">sostituirà tutti quelli che sono contro</span>. In questo settore, ovvero il Digital Marketing, bisogna <span class="keyword">saperci collaborare</span> se non vuoi essere sostituito.
+  </p>
+  <div class="footer">
+    <span>Estratto letterale — aula ITS</span>
+    <span class="arrow">▶</span>
+  </div>
+</div>
+</body>
+</html>

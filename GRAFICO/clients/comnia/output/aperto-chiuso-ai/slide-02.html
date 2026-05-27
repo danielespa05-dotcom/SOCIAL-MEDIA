@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Slide 2 — La scala</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642;
+  --pastel-coral: #F5A89A;
+  --pastel-blue: #A8D8EA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.kicker {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: var(--text-dark);
+  color: var(--white);
+  padding: 10px 18px;
+  margin-top: 30px;
+  margin-bottom: 28px;
+  align-self: flex-start;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 36px;
+  max-width: 920px;
+}
+
+.keyword { color: var(--red-comnia); }
+
+.scale {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-top: 1px solid #D0C8BE;
+}
+
+.row:last-child { border-bottom: 1px solid #D0C8BE; }
+
+.num {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1.1;
+  color: var(--text-dark);
+}
+
+.row__label {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.row__desc {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.35;
+  color: var(--text-dark);
+}
+
+.tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 4px 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+  letter-spacing: 0.02em;
+}
+
+.tag--closed { background-color: var(--pastel-coral); }
+.tag--open { background-color: var(--pastel-yellow); }
+.tag--mid { background-color: var(--pastel-blue); }
+
+.footer {
+  position: absolute;
+  bottom: 50px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-size: 32px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+  <span class="kicker">codice + pesi</span>
+  <h1 class="title">Un modello ha <span class="keyword">due strati</span>. La scala va dal più chiuso al più aperto.</h1>
+
+  <div class="scale">
+    <div class="row">
+      <div class="num">1</div>
+      <div>
+        <div class="row__label">API <span class="tag tag--closed">più chiuso</span></div>
+        <div class="row__desc">Claude, ChatGPT. Non hai codice né pesi, solo un endpoint.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="num">2</div>
+      <div>
+        <div class="row__label">Codice aperto, pesi chiusi <span class="tag tag--mid">vetrina</span></div>
+        <div class="row__desc">Vedi com'è fatto ma non puoi usarlo. GPT-2, Bloomberg GPT.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="num">3</div>
+      <div>
+        <div class="row__label">Codice + pesi aperti <span class="tag tag--open">"open source" oggi</span></div>
+        <div class="row__desc">DeepSeek, Qwen, Llama. Scarichi e fai girare a casa tua.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="num">4</div>
+      <div>
+        <div class="row__label">Tutto aperto, training data inclusi <span class="tag tag--open">raro</span></div>
+        <div class="row__desc">Open completo. Quasi nessuno lo fa davvero.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>2 strati · 4 livelli</span>
+    <span class="arrow">▶</span>
+  </div>
+</div>
+</body>
+</html>

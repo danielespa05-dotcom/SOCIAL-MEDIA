@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>4 ore libere — 06</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --red-cta: #B71C1C;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-warm);
+  color: var(--text-dark);
+  position: relative;
+  overflow: hidden;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 52px;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: auto;
+}
+
+.question {
+  font-weight: 900;
+  font-size: 88px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+}
+
+.question .red {
+  color: var(--red-comnia);
+}
+
+.divider {
+  width: 80px;
+  height: 5px;
+  background: var(--red-comnia);
+  border-radius: 0;
+}
+
+.cta-text {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 40px;
+  line-height: 1.35;
+  color: var(--text-dark);
+}
+
+.cta-button {
+  background: var(--red-cta);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 36px;
+  padding: 28px 64px;
+  border-radius: 0;
+  border: none;
+  cursor: default;
+  display: inline-block;
+}
+
+.caption {
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+
+  <div class="question">
+    E tu?<br>
+    <span class="red">A o B?</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <p class="cta-text">Dimmelo nei commenti.</p>
+
+  <div class="cta-button">Scrivi la tua risposta</div>
+
+  <p class="caption">comnia.it</p>
+</div>
+</body>
+</html>

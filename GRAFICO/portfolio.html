@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="it" data-lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Nome Cognome] — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --bg-elev: #111114;
+    --bg-card: #15151a;
+    --border: #1f1f25;
+    --border-hover: #2a2a33;
+    --text: #e8e8ea;
+    --text-dim: #8a8a93;
+    --text-mute: #5a5a63;
+    --accent: #00ff88;
+    --accent-dim: #00b864;
+    --danger: #ff4d6d;
+    --radius: 8px;
+    --maxw: 1200px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Subtle grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Radial glow */
+  body::after {
+    content: '';
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(0,255,136,.08) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(10,10,11,.7);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -.02em;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .5; }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+  .nav-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color .2s;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  .lang-toggle {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+  }
+  .lang-toggle button {
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    padding: 6px 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    transition: all .2s;
+  }
+  .lang-toggle button.active {
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 700;
+  }
+
+  @media (max-width: 720px) {
+    .nav-links a:not(.cta-nav) { display: none; }
+  }
+
+  /* HERO */
+  section { padding: 120px 0; position: relative; }
+  @media (max-width: 720px) { section { padding: 80px 0; } }
+
+  .hero { padding-top: 80px; padding-bottom: 80px; }
+  .hero-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border: 1px solid rgba(0,255,136,.2);
+    background: rgba(0,255,136,.05);
+    border-radius: 100px;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+  }
+  h1 {
+    font-size: clamp(40px, 7vw, 88px);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -.04em;
+    margin-bottom: 24px;
+  }
+  h1 .accent { color: var(--accent); }
+  h1 .cursor {
+    display: inline-block;
+    width: .55ch;
+    background: var(--accent);
+    animation: blink 1s steps(2) infinite;
+    margin-left: 4px;
+    vertical-align: text-top;
+    height: .9em;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .hero-sub {
+    font-size: clamp(16px, 2vw, 20px);
+    color: var(--text-dim);
+    max-width: 640px;
+    margin-bottom: 40px;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border-radius: var(--radius);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .2s;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--bg);
+  }
+  .btn-primary:hover {
+    background: var(--accent-dim);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0,255,136,.2);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+  }
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .btn .arrow { transition: transform .2s; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* Stats / signal row */
+  .signals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    margin-top: 64px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+  .signal {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .signal .num {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -.02em;
+  }
+  .signal .label {
+    font-size: 12px;
+    color: var(--text-mute);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-top: 4px;
+  }
+
+  /* SECTION HEADER */
+  .sec-head {
+    margin-bottom: 64px;
+  }
+  .sec-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .sec-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+  h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    letter-spacing: -.03em;
+    line-height: 1.1;
+    max-width: 720px;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 64px;
+    align-items: start;
+  }
+  @media (max-width: 800px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .photo-wrap {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+  }
+  .photo-wrap::before {
+    content: 'PHOTO_PLACEHOLDER';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-mute);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: .1em;
+  }
+  .photo-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(45deg, transparent 0 20px, rgba(255,255,255,.02) 20px 21px);
+  }
+
+  .about-text p {
+    font-size: 17px;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+  }
+  .about-text p strong { color: var(--text); font-weight: 600; }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 32px;
+  }
+  .skill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    color: var(--text-dim);
+    transition: all .2s;
+  }
+  .skill:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* PROJECTS */
+  .projects {
+    display: grid;
+    gap: 24px;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
+    align-items: center;
+    padding: 48px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .4s;
+  }
+  .project:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+  }
+  .project:hover::before { transform: scaleY(1); }
+
+  @media (max-width: 800px) {
+    .project { grid-template-columns: 1fr; padding: 32px 24px; gap: 24px; }
+  }
+
+  .project-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--text-mute);
+    margin-bottom: 12px;
+  }
+  .project h3 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    margin-bottom: 16px;
+  }
+  .project-desc {
+    color: var(--text-dim);
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .project-meta .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-mute);
+    padding: 4px 10px;
+    background: var(--bg-elev);
+    border-radius: 4px;
+  }
+  .project-links {
+    display: flex;
+    gap: 16px;
+  }
+  .project-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap .2s;
+  }
+  .project-link:hover { gap: 10px; }
+
+  .project-visual {
+    aspect-ratio: 4/3;
+    border-radius: 8px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-visual::before {
+    content: 'PROJECT_VISUAL';
+    color: var(--text-mute);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .1em;
+  }
+  .project-visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, transparent 49%, rgba(0,255,136,.05) 50%, transparent 51%),
+      repeating-linear-gradient(90deg, transparent 0 30px, rgba(255,255,255,.02) 30px 31px);
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .service {
+    padding: 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all .3s;
+  }
+  .service:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+  }
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(0,255,136,.1);
+    border: 1px solid rgba(0,255,136,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .service h4 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    margin-bottom: 12px;
+  }
+  .service p {
+    color: var(--text-dim);
+    font-size: 15px;
+  }
+
+  /* CONTACT */
+  .contact-card {
+    background: linear-gradient(135deg, var(--bg-card), var(--bg-elev));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,255,136,.06) 0%, transparent 60%);
+  }
+  @media (max-width: 720px) { .contact-card { padding: 40px 24px; } }
+
+  .contact-card h2 { margin: 0 auto 16px; }
+  .contact-card p {
+    color: var(--text-dim);
+    max-width: 520px;
+    margin: 0 auto 32px;
+    font-size: 17px;
+  }
+  .contact-card .btn {
+    margin: 0 auto;
+  }
+  .contact-extra {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+  }
+  .contact-extra a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .contact-extra a:hover { color: var(--accent); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    margin-top: 80px;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-mute);
+  }
+
+  /* Fade-in on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Lang switching */
+  [data-lang="it"] .en { display: none; }
+  [data-lang="en"] .it { display: none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="dot"></span>
+      <span>[nome].dev</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about"><span class="it">chi sono</span><span class="en">about</span></a>
+      <a href="#projects"><span class="it">progetti</span><span class="en">projects</span></a>
+      <a href="#services"><span class="it">servizi</span><span class="en">services</span></a>
+      <a href="#contact"><span class="it">contatti</span><span class="en">contact</span></a>
+      <div class="lang-toggle">
+        <button class="active" data-set-lang="it">IT</button>
+        <button data-set-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-tag">
+      <span class="it">disponibile per nuovi progetti</span>
+      <span class="en">available for new projects</span>
+    </div>
+    <h1>
+      <span class="it">Costruisco <span class="accent">automazioni AI</span><br>che fanno risparmiare tempo alle aziende<span class="cursor">&nbsp;</span></span>
+      <span class="en">I build <span class="accent">AI automations</span><br>that save companies time<span class="cursor">&nbsp;</span></span>
+    </h1>
+    <p class="hero-sub">
+      <span class="it">[Headline placeholder — una frase che dice cosa fai, per chi, e che valore porti. Es: sviluppatore full-stack specializzato in workflow AI con Claude.]</span>
+      <span class="en">[Headline placeholder — one sentence: what you do, for whom, the value you bring. E.g. full-stack developer specialized in AI workflows with Claude.]</span>
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">
+        <span class="it">vedi i progetti</span>
+        <span class="en">see projects</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="#contact" class="btn btn-ghost">
+        <span class="it">parliamone</span>
+        <span class="en">let's talk</span>
+      </a>
+    </div>
+
+    <div class="signals">
+      <div class="signal">
+        <div class="num">XX+</div>
+        <div class="label"><span class="it">progetti</span><span class="en">projects</span></div>
+      </div>
+      <div class="signal">
+        <div class="num">X<span style="color:var(--accent)">y</span></div>
+        <div class="label"><span class="it">anni di esperienza</span><span class="en">years experience</span></div>
+      </div>
+      <div class="signal">
+        <div class="num">XX%</div>
+        <div class="label"><span class="it">tempo risparmiato medio</span><span class="en">avg time saved</span></div>
+      </div>
+      <div class="signal">
+        <div class="num">24/7</div>
+        <div class="label"><span class="it">automazioni attive</span><span class="en">active automations</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">01 / <span class="it">chi sono</span><span class="en">about</span></div>
+      <h2>
+        <span class="it">Sviluppatore con focus su AI, automazioni e prodotti che le aziende possono davvero usare.</span>
+        <span class="en">Developer focused on AI, automation, and products companies can actually use.</span>
+      </h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="photo-wrap"></div>
+      <div class="about-text">
+        <p class="it"><strong>[Nome Cognome]</strong>, [città / dove operi]. [Bio placeholder — 3-5 righe. Chi sei, da quanto fai questo lavoro, su cosa ti specializzi, perché un'azienda dovrebbe scegliere te invece di qualcun altro.]</p>
+        <p class="it">[Secondo paragrafo — opzionale. Background, percorso, cosa ti appassiona. Mantieni un tono asciutto e concreto.]</p>
+
+        <p class="en"><strong>[Name Surname]</strong>, [city / where you operate]. [Bio placeholder — 3-5 lines. Who you are, how long you've been doing this, what you specialize in, why a company should pick you.]</p>
+        <p class="en">[Second paragraph — optional. Background, journey, what drives you. Keep it dry and concrete.]</p>
+
+        <div class="skills">
+          <span class="skill">Claude API</span>
+          <span class="skill">Node.js</span>
+          <span class="skill">React</span>
+          <span class="skill">TypeScript</span>
+          <span class="skill">Python</span>
+          <span class="skill">PostgreSQL</span>
+          <span class="skill">AI agents</span>
+          <span class="skill">Automation</span>
+          <span class="skill">Puppeteer</span>
+          <span class="skill">MCP</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">02 / <span class="it">progetti</span><span class="en">projects</span></div>
+      <h2>
+        <span class="it">Lavori selezionati. Ogni progetto ha un problema reale alle spalle.</span>
+        <span class="en">Selected work. Every project has a real problem behind it.</span>
+      </h2>
+    </div>
+
+    <div class="projects">
+
+      <!-- PROJECT 1 -->
+      <article class="project">
+        <div>
+          <div class="project-num">// 001</div>
+          <h3>[Titolo Progetto 1]</h3>
+          <p class="project-desc">
+            <span class="it">[Descrizione del progetto in 2-3 righe. Quale problema risolve, per chi, e cosa fa di concreto.]</span>
+            <span class="en">[Project description in 2-3 lines. What problem it solves, for whom, what it does concretely.]</span>
+          </p>
+          <div class="project-meta">
+            <span class="tag">Claude API</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Puppeteer</span>
+            <span class="tag">Automation</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><span class="it">caso studio</span><span class="en">case study</span> →</a>
+            <a href="#" class="project-link">repo →</a>
+          </div>
+        </div>
+        <div class="project-visual"></div>
+      </article>
+
+      <!-- PROJECT 2 -->
+      <article class="project">
+        <div>
+          <div class="project-num">// 002</div>
+          <h3>[Titolo Progetto 2]</h3>
+          <p class="project-desc">
+            <span class="it">[Descrizione del progetto in 2-3 righe. Risultato/impatto se possibile con numeri: "ridotto tempo del 70%", "usato da X aziende".]</span>
+            <span class="en">[Project description in 2-3 lines. Result/impact with numbers if possible: "reduced time by 70%", "used by X companies".]</span>
+          </p>
+          <div class="project-meta">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><span class="it">demo live</span><span class="en">live demo</span> →</a>
+            <a href="#" class="project-link">repo →</a>
+          </div>
+        </div>
+        <div class="project-visual"></div>
+      </article>
+
+      <!-- PROJECT 3 -->
+      <article class="project">
+        <div>
+          <div class="project-num">// 003</div>
+          <h3>[Titolo Progetto 3]</h3>
+          <p class="project-desc">
+            <span class="it">[Descrizione del progetto. Stack tecnico usato, sfida principale, soluzione adottata.]</span>
+            <span class="en">[Project description. Tech stack used, main challenge, adopted solution.]</span>
+          </p>
+          <div class="project-meta">
+            <span class="tag">Python</span>
+            <span class="tag">MCP</span>
+            <span class="tag">AI agents</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"><span class="it">caso studio</span><span class="en">case study</span> →</a>
+          </div>
+        </div>
+        <div class="project-visual"></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="reveal">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">03 / <span class="it">servizi</span><span class="en">services</span></div>
+      <h2>
+        <span class="it">Cosa posso fare per la tua azienda.</span>
+        <span class="en">What I can do for your company.</span>
+      </h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="service">
+        <div class="service-icon">{ }</div>
+        <h4><span class="it">Automazioni AI con Claude</span><span class="en">AI automation with Claude</span></h4>
+        <p>
+          <span class="it">[Descrizione servizio — task ripetitivi automatizzati, integrazioni Claude API, agenti custom.]</span>
+          <span class="en">[Service description — repetitive tasks automated, Claude API integrations, custom agents.]</span>
+        </p>
+      </div>
+      <div class="service">
+        <div class="service-icon">&lt;/&gt;</div>
+        <h4><span class="it">Sviluppo web</span><span class="en">Web development</span></h4>
+        <p>
+          <span class="it">[Descrizione — siti, web app, dashboard, integrazioni. Frontend React, backend Node.]</span>
+          <span class="en">[Description — sites, web apps, dashboards, integrations. React frontend, Node backend.]</span>
+        </p>
+      </div>
+      <div class="service">
+        <div class="service-icon">⚡</div>
+        <h4><span class="it">Workflow su misura</span><span class="en">Custom workflows</span></h4>
+        <p>
+          <span class="it">[Descrizione — analisi processo + automazione end-to-end. Riduzione tempo operativo.]</span>
+          <span class="en">[Description — process analysis + end-to-end automation. Operational time reduction.]</span>
+        </p>
+      </div>
+      <div class="service">
+        <div class="service-icon">API</div>
+        <h4><span class="it">Integrazioni & API</span><span class="en">Integrations & API</span></h4>
+        <p>
+          <span class="it">[Descrizione — collegare tool esistenti, build API custom, MCP server, sync dati.]</span>
+          <span class="en">[Description — connect existing tools, build custom APIs, MCP servers, data sync.]</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <div class="container">
+    <div class="contact-card">
+      <div class="sec-label" style="justify-content:center"><span class="it">04 / parliamone</span><span class="en">04 / let's talk</span></div>
+      <h2>
+        <span class="it">Hai un progetto in mente?</span>
+        <span class="en">Got a project in mind?</span>
+      </h2>
+      <p>
+        <span class="it">Raccontami cosa serve alla tua azienda. Ti rispondo entro 24 ore con una prima valutazione.</span>
+        <span class="en">Tell me what your company needs. I'll get back to you within 24 hours with a first take.</span>
+      </p>
+      <a href="mailto:[email]" class="btn btn-primary">
+        <span class="it">scrivimi</span>
+        <span class="en">email me</span>
+        <span class="arrow">→</span>
+      </a>
+
+      <div class="contact-extra">
+        <a href="mailto:[email]">[email]</a>
+        <span style="color:var(--text-mute)">/</span>
+        <a href="#">LinkedIn</a>
+        <span style="color:var(--text-mute)">/</span>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> [Nome Cognome]. <span class="it">Costruito a mano.</span><span class="en">Hand-built.</span></div>
+      <div>[location] · [timezone]</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Lang toggle
+  document.querySelectorAll('[data-set-lang]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.setLang;
+      document.documentElement.dataset.lang = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-set-lang]').forEach(b => {
+        b.classList.toggle('active', b.dataset.setLang === lang);
+      });
+    });
+  });
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

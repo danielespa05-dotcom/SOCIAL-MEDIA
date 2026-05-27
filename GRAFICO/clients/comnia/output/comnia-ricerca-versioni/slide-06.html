@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>V6 — Trio core</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642;
+  --pastel-coral: #F5A89A;
+  --pastel-blue: #A8D8EA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-warm);
+  color: var(--text-dark);
+  position: relative;
+  overflow: hidden;
+  padding: 110px 80px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: auto;
+}
+
+.eyebrow {
+  margin-top: 70px;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.headline {
+  margin-top: 22px;
+  font-weight: 900;
+  font-size: 86px;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.headline em {
+  color: var(--red-comnia);
+  font-style: normal;
+}
+
+.trio {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  border-top: 2px solid var(--text-dark);
+  padding: 22px 0 22px;
+}
+
+.row:last-child { border-bottom: 2px solid var(--text-dark); }
+
+.num {
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--red-comnia);
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.word {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  flex: 1;
+}
+
+.swatch {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.s-yellow { background: var(--pastel-yellow); }
+.s-coral { background: var(--pastel-coral); }
+.s-blue { background: var(--pastel-blue); }
+
+.outro {
+  margin-top: 50px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1.4;
+  color: var(--text-dark);
+  max-width: 860px;
+}
+
+.outro b {
+  color: var(--red-comnia);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.foot {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 22px;
+  padding-top: 40px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.foot b {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+
+  <div class="eyebrow">Per noi non sono parole da brochure</div>
+  <h1 class="headline">
+    Sono il<br>
+    <em>lavoro vero.</em>
+  </h1>
+
+  <div class="trio">
+    <div class="row">
+      <div class="num">01</div>
+      <div class="word">Ricerca</div>
+      <div class="swatch s-yellow"></div>
+    </div>
+    <div class="row">
+      <div class="num">02</div>
+      <div class="word">Innovazione</div>
+      <div class="swatch s-coral"></div>
+    </div>
+    <div class="row">
+      <div class="num">03</div>
+      <div class="word">Formazione</div>
+      <div class="swatch s-blue"></div>
+    </div>
+  </div>
+
+  <p class="outro">
+    Tutto il resto — i progetti, i software, i siti<br>
+    che consegniamo — <b>è la conseguenza.</b>
+  </p>
+
+  <div class="foot">
+    <span><b>Nicola</b> · Comnia · 2026</span>
+    <span>comnia.it</span>
+  </div>
+</div>
+</body>
+</html>

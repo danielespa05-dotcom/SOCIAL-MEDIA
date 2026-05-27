@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>L'AI non è la maionese</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+    :root {
+      --bg-dark: #0A0A0A;
+      --red-comnia: #C82B2B;
+      --white: #FFFFFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .slide {
+      width: 1080px;
+      height: 1350px;
+      background-color: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 56px;
+    }
+
+    .logo {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      width: 90px;
+      height: auto;
+    }
+
+    .image-wrapper {
+      width: 100%;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      display: block;
+    }
+
+    .title {
+      font-weight: 900;
+      font-size: 96px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+
+    .keyword {
+      color: var(--red-comnia);
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <img class="logo" src="../../brand/assets/logo-white.png" alt="Comnia">
+
+    <div class="image-wrapper">
+      <img src="./Screenshot%202026-04-26%20alle%2018.44.15.png" alt="">
+    </div>
+
+    <div class="title">
+      L'AI non è<br>la <span class="keyword">maionese</span>.
+    </div>
+  </div>
+</body>
+</html>

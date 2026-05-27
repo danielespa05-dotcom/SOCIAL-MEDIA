@@ -1,0 +1,15 @@
+Il Markdown non lo ha inventato Anthropic.
+
+Esiste dal 2004. Lo ha creato John Gruber per aiutare i giornalisti a scrivere HTML senza imparare HTML.
+
+Poi è arrivato GitHub, i README.md, e per dieci anni è rimasto roba da developer. Poi è arrivata l'AI e qualcuno ha deciso che era "il modo per comunicare con le macchine".
+
+Le macchine lo trattano come una sequenza di token, numeri. Il cancelletto davanti a un titolo, il doppio asterisco del grassetto: caratteri come tutti gli altri.
+
+La struttura la legge chi scrive. La macchina vede token.
+
+Il Markdown è uno strumento per gli umani che scrivono. Utile perché ti aiuta a organizzare i pensieri prima di darli in pasto a un sistema. Ma gli XML tags sono più precisi per i prompt strutturati: Anthropic stessa li raccomanda. Meno token sprecati, margine di errore ridotto.
+
+Ma richiedono di imparare la sintassi, e non tutti hanno voglia di farlo alle undici di sera.
+
+Quindi .md. Solo che adesso lo sai.

@@ -1,0 +1,97 @@
+{
+  "brand": {
+    "name": "COMNIA",
+    "tagline": "Digital agency — Padova",
+    "voice": {
+      "tone": ["diretto", "informativo", "opinionato"],
+      "language": "it-IT",
+      "avoid": ["meme", "pop culture", "emoji decorativi", "claim generici"]
+    }
+  },
+  "canvas": {
+    "post": { "width": 1080, "height": 1350, "aspect": "4:5" },
+    "carousel": { "width": 1080, "height": 1350, "aspect": "4:5" },
+    "story": { "width": 1080, "height": 1920, "aspect": "9:16" }
+  },
+  "colors": {
+    "bg-dark": "#0A0A0A",
+    "bg-warm": "#F0EBE5",
+    "red-comnia": "#C82B2B",
+    "red-cta": "#B71C1C",
+    "white": "#FFFFFF",
+    "text-dark": "#1A1A1A",
+    "text-muted": "#6B6B6B",
+    "bubble-dark": "#1A1A1A",
+    "bubble-light": "#E8E3DD",
+    "pastel-yellow": "#F5E642",
+    "pastel-coral": "#F5A89A",
+    "pastel-blue": "#A8D8EA",
+    "divider-light": "#D0C8BE",
+    "divider-dark": "#333333"
+  },
+  "typography": {
+    "family": "Montserrat",
+    "fallback": ["Poppins", "sans-serif"],
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap",
+    "scale": {
+      "display":          { "weight": 900, "style": "normal", "sizePx": [72, 96], "case": "uppercase",     "letterSpacing": "-0.02em", "lineHeight": 1.1 },
+      "heading":          { "weight": 900, "style": "normal", "sizePx": [48, 64], "case": "sentence_case", "letterSpacing": "-0.02em", "lineHeight": 1.1 },
+      "bodyLarge":        { "weight": 400, "style": "normal", "sizePx": [36, 42], "case": "sentence_case", "letterSpacing": "0",       "lineHeight": 1.4 },
+      "bodyLargeBold":    { "weight": 700, "style": "normal", "sizePx": [36, 42], "case": "sentence_case", "letterSpacing": "0",       "lineHeight": 1.4 },
+      "bodyLargeEmotive": { "weight": 700, "style": "italic", "sizePx": [36, 42], "case": "sentence_case", "letterSpacing": "0",       "lineHeight": 1.4 },
+      "caption":          { "weight": 400, "style": "normal", "sizePx": [24, 28], "case": "sentence_case", "letterSpacing": "0",       "lineHeight": 1.3 },
+      "cta":              { "weight": 700, "style": "italic", "sizePx": [36, 42], "case": "sentence_case", "letterSpacing": "0",       "lineHeight": 1.2 }
+    }
+  },
+  "layout": {
+    "paddingMinPx": 60,
+    "logoWidthPx": 90,
+    "logoOffsetPx": 40,
+    "bubbleRadiusPx": 0,
+    "bubblePaddingPx": [28, 32],
+    "ctaRadiusPx": 0,
+    "imageRadiusPx": 0,
+    "cornerStyle": "sharp",
+    "note": "Tutte le forme hanno spigoli vivi. Mai usare border-radius > 0."
+  },
+  "arrow": {
+    "glyph": "\u25b6",
+    "name": "filled right triangle",
+    "color": "red-comnia",
+    "usage": "Sostituisce il doppio chevron » come indicatore 'swipe/scopri'. Mai nella slide CTA."
+  },
+  "assets": {
+    "logoDark":  "brand/assets/logo-dark.png",
+    "logoWhite": "brand/assets/logo-white.png"
+  },
+  "rules": {
+    "never": [
+      "sfondo #FFFFFF come sezione",
+      "red-comnia su body text",
+      "grigi intermedi (#888, #AAA)",
+      "border-radius > 0 su qualsiasi forma (spigoli vivi ovunque)",
+      "font diversi da Montserrat",
+      "più di 8 righe di testo per slide",
+      "triangolini ▶ nella slide CTA",
+      "pastello come sfondo intera slide",
+      "meme o riferimenti pop culture"
+    ],
+    "always": [
+      "logo su ogni slide",
+      "triangolino ▶ in rosso sulle slide intermedie (mai nella CTA)",
+      "bold (700) per keyword e bold italic (700i) per frasi emotive",
+      "padding minimo 60px su tutti i lati",
+      "testo su pastello SEMPRE text-dark, mai bianco",
+      "spigoli vivi: tutti i radius a 0"
+    ]
+  },
+  "palette_usage": {
+    "accent": ["red-comnia"],
+    "cta": ["red-cta"],
+    "pastels": {
+      "allowed_contexts": ["tag", "highlight-bar", "accent-line", "badge", "bullet"],
+      "max_per_slide_on_warm_bg": 2,
+      "rotate_between_slides": true
+    }
+  }
+}

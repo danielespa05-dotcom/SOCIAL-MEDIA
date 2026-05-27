@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>V7 — Capire prima</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+  --pastel-coral: #F5A89A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-dark);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding: 100px 80px 80px;
+}
+
+.logo {
+  position: absolute;
+  top: 44px;
+  right: 48px;
+  width: 92px;
+  height: auto;
+  z-index: 5;
+}
+
+.giant-r {
+  position: absolute;
+  top: -90px;
+  left: -60px;
+  font-weight: 900;
+  font-size: 1180px;
+  line-height: 0.78;
+  letter-spacing: -0.06em;
+  color: var(--red-comnia);
+  opacity: 0.14;
+  font-style: italic;
+  pointer-events: none;
+  user-select: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--pastel-coral);
+  color: #1A1A1A;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 8px 18px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 70px;
+  align-self: flex-start;
+}
+
+.headline {
+  margin-top: 60px;
+  font-weight: 900;
+  font-size: 132px;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-transform: lowercase;
+}
+
+.headline em {
+  color: var(--red-comnia);
+  font-style: italic;
+  font-weight: 900;
+}
+
+.divider {
+  width: 80px;
+  height: 6px;
+  background: var(--white);
+  margin-top: 50px;
+}
+
+.body {
+  margin-top: 36px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.85);
+  max-width: 820px;
+}
+
+.body b {
+  font-weight: 700;
+  color: var(--white);
+}
+
+.body .red {
+  color: var(--red-comnia);
+  font-weight: 700;
+}
+
+.foot {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 50px;
+  font-size: 22px;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.06em;
+}
+
+.foot b {
+  color: var(--white);
+  font-weight: 700;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <span class="giant-r">R</span>
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="Comnia">
+
+  <div class="content">
+    <div class="tag">Manifesto · 01</div>
+
+    <h1 class="headline">
+      capire<br>
+      <em>prima.</em>
+    </h1>
+
+    <div class="divider"></div>
+
+    <p class="body">
+      Non ci basta lavorare bene.<br>
+      In una zona di mezzo tra "l'AI fa tutto"<br>
+      e "l'AI non serve", il nostro mestiere<br>
+      <b>non è vendere strumenti.</b><br>
+      <span class="red">È capirli prima.</span>
+    </p>
+
+    <div class="foot">
+      <span><b>Nicola</b> · Founder · Comnia</span>
+      <span>comnia.it</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

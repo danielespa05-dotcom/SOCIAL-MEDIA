@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>COMNIA — Slide 05</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642;
+  --pastel-coral: #F5A89A;
+  --pastel-blue: #A8D8EA;
+  --bubble-light: #E8E3DD;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-warm);
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 90px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.slide-number {
+  position: absolute;
+  top: 60px;
+  left: 70px;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.slide-number::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 6px;
+  background: var(--pastel-yellow);
+  margin-top: 14px;
+}
+
+.heading {
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  max-width: 900px;
+}
+
+.heading .accent {
+  background: var(--pastel-yellow);
+  padding: 2px 14px;
+  display: inline-block;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 880px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  background-color: var(--bubble-light);
+  border-left: 10px solid var(--red-comnia);
+  text-align: left;
+}
+
+.item .icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-dark);
+  color: #fff;
+}
+
+.item .text {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.item .text .keyword {
+  color: var(--red-comnia);
+  font-weight: 900;
+}
+
+.item .text .bold {
+  font-weight: 900;
+}
+
+.emotive {
+  position: absolute;
+  bottom: 80px;
+  right: 70px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 36px;
+  line-height: 1.35;
+}
+
+.emotive .arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-style: normal;
+  margin-left: 12px;
+}
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="COMNIA" />
+
+  <h2 class="heading">Quello che <span class="accent">non si automatizza:</span></h2>
+
+  <div class="list">
+    <div class="item">
+      <div class="icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9.5 2a4 4 0 0 0-4 4v1A4 4 0 0 0 4 11a4 4 0 0 0 1.5 3 4 4 0 0 0 4 4 4 4 0 0 0 4-4M14.5 2a4 4 0 0 1 4 4v1a4 4 0 0 1 1.5 4 4 4 0 0 1-1.5 3 4 4 0 0 1-4 4 4 4 0 0 1-4-4"/>
+        </svg>
+      </div>
+      <div class="text"><span class="keyword">Pensiero critico</span> reale.</div>
+    </div>
+
+    <div class="item">
+      <div class="icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="7" r="3"/>
+          <circle cx="17" cy="9" r="2.5"/>
+          <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+          <path d="M14 19c0-2.5 2-4.5 4.5-4.5S23 16.5 23 19"/>
+        </svg>
+      </div>
+      <div class="text"><span class="keyword">Relazioni</span> che durano.</div>
+    </div>
+
+    <div class="item">
+      <div class="icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/>
+        </svg>
+      </div>
+      <div class="text">Una <span class="bold">visione</span> da <span class="bold">anni di errori tuoi</span>.</div>
+    </div>
+
+    <div class="item">
+      <div class="icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="9"/>
+          <line x1="12" y1="8" x2="12" y2="13"/>
+          <circle cx="12" cy="16.5" r="0.8" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="text">Capire quando <span class="keyword">qualcosa non torna</span> anche se i numeri dicono di sì.</div>
+    </div>
+  </div>
+
+  <p class="emotive">
+    Ed è qui che vinci tu. <span class="arrow">▶</span>
+  </p>
+</div>
+
+</body>
+</html>

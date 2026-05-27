@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>COMNIA — Cover</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --red-cta: #B71C1C;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642;
+  --pastel-coral: #F5A89A;
+  --pastel-blue: #A8D8EA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 8px 20px;
+  border-radius: 0;
+  color: var(--text-dark);
+  background-color: var(--pastel-yellow);
+  margin-top: 40px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 92px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-top: 28px;
+}
+
+.title .keyword {
+  color: var(--red-comnia);
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.35;
+  margin-top: 40px;
+  max-width: 860px;
+  color: var(--white);
+  opacity: 0.85;
+}
+
+.subtitle .arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  margin-left: 12px;
+}
+
+.meta {
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--white);
+  opacity: 0.55;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="COMNIA" />
+
+  <div>
+    <span class="tag">Guida · 2026</span>
+    <h1 class="title">
+      Titolo grande<br>
+      con <span class="keyword">keyword</span><br>
+      che ferma il pollice
+    </h1>
+    <p class="subtitle">
+      Sottotitolo breve che spiega il beneficio e anticipa il contenuto <span class="arrow">▶</span>
+    </p>
+  </div>
+
+  <div class="meta">01 / 07 — Carosello</div>
+</div>
+
+</body>
+</html>

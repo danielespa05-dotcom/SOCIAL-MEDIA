@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>COMNIA — Slide 01</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+  --pastel-yellow: #F5E642;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-dark);
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 90px 90px;
+  pointer-events: none;
+}
+
+.bg-glow {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,43,43,0.18) 0%, rgba(200,43,43,0) 65%);
+  top: -250px;
+  left: -250px;
+  pointer-events: none;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+  z-index: 3;
+}
+
+.tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 10px 22px;
+  background-color: var(--pastel-yellow);
+  color: #1A1A1A;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  margin-top: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+.title .keyword {
+  color: var(--red-comnia);
+}
+
+.icon-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 56px;
+  position: relative;
+  z-index: 2;
+}
+
+.icon-circle {
+  width: 92px;
+  height: 92px;
+  border: 3px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.04);
+}
+
+.icon-circle.accent {
+  border-color: var(--red-comnia);
+  background-color: var(--red-comnia);
+}
+
+.icon-arrow {
+  font-size: 50px;
+  color: var(--white);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 38px;
+  line-height: 1.35;
+  margin-top: 56px;
+  max-width: 880px;
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 2;
+}
+
+.subtitle .keyword {
+  color: var(--red-comnia);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.subtitle .arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-style: normal;
+  margin-left: 10px;
+}
+
+.meta {
+  position: absolute;
+  bottom: 50px;
+  left: 70px;
+  font-weight: 700;
+  font-size: 20px;
+  opacity: 0.5;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="COMNIA" />
+
+  <span class="tag">AI · Lavoro · 2026</span>
+  <h1 class="title">
+    Tutti hanno paura<br>
+    che l'AI li<br>
+    <span class="keyword">sostituisca.</span>
+  </h1>
+
+  <div class="icon-row">
+    <div class="icon-circle">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+      </svg>
+    </div>
+    <div class="icon-arrow">→</div>
+    <div class="icon-circle accent">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+        <rect x="4" y="6" width="16" height="12" rx="0"/>
+        <circle cx="9" cy="12" r="1.5" fill="white"/>
+        <circle cx="15" cy="12" r="1.5" fill="white"/>
+        <path d="M12 4v2M8 4v2M16 4v2"/>
+      </svg>
+    </div>
+  </div>
+
+  <p class="subtitle">
+    Quasi nessuno si chiede se vale la pena <span class="keyword">sostituirli.</span> <span class="arrow">▶</span>
+  </p>
+
+</div>
+
+</body>
+</html>

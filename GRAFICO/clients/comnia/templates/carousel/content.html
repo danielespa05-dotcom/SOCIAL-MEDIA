@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>COMNIA — Content</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --red-cta: #B71C1C;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --bubble-dark: #1A1A1A;
+  --bubble-light: #E8E3DD;
+  --pastel-yellow: #F5E642;
+  --pastel-coral: #F5A89A;
+  --pastel-blue: #A8D8EA;
+  --divider-light: #D0C8BE;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 90px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.slide-number {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.accent-line {
+  width: 80px;
+  height: 6px;
+  border-radius: 0;
+  background-color: var(--pastel-coral);
+  margin-top: 32px;
+}
+
+.heading {
+  font-weight: 900;
+  font-size: 58px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-top: 24px;
+  max-width: 900px;
+}
+
+.heading .keyword {
+  color: var(--red-comnia);
+}
+
+.body-text {
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 1.4;
+  margin-top: 36px;
+  max-width: 900px;
+}
+
+.body-text .keyword {
+  color: var(--red-comnia);
+  font-weight: 700;
+}
+
+.body-text .bold {
+  font-weight: 700;
+}
+
+.bubble {
+  background-color: var(--bubble-dark);
+  color: var(--white);
+  border-radius: 0;
+  padding: 28px 32px;
+  margin-top: 32px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.35;
+  max-width: 900px;
+}
+
+.emotive {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 36px;
+  line-height: 1.35;
+  margin-top: 32px;
+  text-align: right;
+}
+
+.emotive .arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-style: normal;
+  margin-left: 12px;
+}
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="COMNIA" />
+
+  <div>
+    <div class="slide-number">02 / 07</div>
+    <div class="accent-line"></div>
+    <h2 class="heading">
+      Titolo della slide<br>
+      con <span class="keyword">keyword</span>
+    </h2>
+    <p class="body-text">
+      Testo principale che spiega il concetto in modo <span class="bold">diretto</span>.
+      La <span class="keyword">parola chiave</span> va in rosso e il resto resta nero,
+      max 6-8 righe.
+    </p>
+    <div class="bubble">
+      Blocco evidenziato con il dato o la frase chiave che vuoi far ricordare.
+    </div>
+  </div>
+
+  <p class="emotive">
+    E questa è la frase emotiva <span class="arrow">▶</span>
+  </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>COMNIA — Cipolla 05</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --white: #FFFFFF;
+  --pastel-coral: #F5A89A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #222;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 110px 70px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+}
+
+.meta-top {
+  position: absolute;
+  top: 140px;
+  left: 70px;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.slide-number {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.accent-line {
+  width: 80px;
+  height: 6px;
+  background-color: var(--pastel-coral);
+  margin-top: 28px;
+}
+
+.cipolla-quote {
+  font-weight: 900;
+  font-size: 66px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  max-width: 940px;
+  padding-left: 40px;
+  border-left: 10px solid var(--red-comnia);
+}
+
+.cipolla-quote .italic {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.cipolla-quote .keyword {
+  color: var(--red-comnia);
+}
+
+.attribution {
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-top: 20px;
+  padding-left: 40px;
+  font-style: italic;
+}
+
+.twist {
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 1.3;
+  margin-top: 72px;
+  max-width: 940px;
+}
+
+.twist .bold {
+  font-weight: 900;
+}
+
+.jira {
+  display: inline-block;
+  background-color: var(--text-dark);
+  color: var(--white);
+  font-weight: 900;
+  font-size: 42px;
+  padding: 4px 18px;
+  margin: 0 2px;
+  letter-spacing: 0.02em;
+  vertical-align: baseline;
+}
+
+.emotive {
+  position: absolute;
+  bottom: 80px;
+  right: 70px;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 38px;
+  text-align: right;
+}
+
+.emotive .arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-style: normal;
+  margin-left: 12px;
+}
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="COMNIA" />
+
+  <div class="meta-top">
+    <div class="slide-number">05 / 06</div>
+    <div class="accent-line"></div>
+  </div>
+
+  <div>
+    <p class="cipolla-quote">
+      <span class="italic">«Il vero errore<br>
+      dei furbi è</span><br>
+      <span class="keyword">sottovalutare</span><br>
+      <span class="italic">gli stupidi.»</span>
+    </p>
+    <p class="attribution">— Cipolla, più o meno</p>
+
+    <p class="twist">
+      Noi l'abbiamo imparato<br>
+      a forza di <span class="bold">ticket</span> su <span class="jira">Jira</span>.
+    </p>
+  </div>
+
+  <p class="emotive">
+    Uno dietro l'altro. <span class="arrow">▶</span>
+  </p>
+</div>
+
+</body>
+</html>

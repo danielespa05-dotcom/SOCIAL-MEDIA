@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Slide 5 — Comnia + CTA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-warm: #F0EBE5;
+  --red-comnia: #C82B2B;
+  --red-cta: #B71C1C;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --pastel-yellow: #F5E642;
+  --pastel-coral: #F5A89A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  position: relative;
+  overflow: hidden;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bg-warm);
+  color: var(--text-dark);
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.kicker {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red-comnia);
+  margin-top: 20px;
+  margin-bottom: 18px;
+}
+
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 36px;
+  height: 4px;
+  background: var(--red-comnia);
+  vertical-align: middle;
+  margin-right: 14px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-bottom: 56px;
+  max-width: 880px;
+}
+
+.keyword { color: var(--red-comnia); }
+
+.fronts {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.front {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  align-items: start;
+  padding-bottom: 28px;
+  border-bottom: 2px solid var(--text-dark);
+}
+
+.front:last-child { border-bottom: none; padding-bottom: 0; }
+
+.front__num {
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+.front__num span { color: var(--red-comnia); }
+
+.front__label {
+  font-weight: 900;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  margin-top: 6px;
+}
+
+.front__body {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 1.4;
+  color: var(--text-dark);
+}
+
+.front__body b { font-weight: 900; }
+.front__body em { font-style: normal; background: var(--pastel-yellow); padding: 0 6px; font-weight: 700; }
+
+.closing {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 36px;
+  text-align: center;
+  max-width: 820px;
+  align-self: center;
+}
+
+.closing b { font-style: normal; font-weight: 900; color: var(--red-comnia); }
+
+.footer {
+  position: absolute;
+  bottom: 50px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.arrow {
+  color: var(--red-comnia);
+  font-weight: 900;
+  font-size: 32px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-dark.png" alt="Comnia">
+  <span class="kicker">in comnia</span>
+  <h1 class="title">Due fronti che, per noi, contano <span class="keyword">più dell'ideologia</span>.</h1>
+
+  <div class="fronts">
+    <div class="front">
+      <div class="front__num">01<span>.</span></div>
+      <div>
+        <div class="front__label">Risparmio aziendale</div>
+        <div class="front__body">Un sistema AI non deve diventare una macchina costosa di token. Qui l'<b>AI in locale</b> vince, e di parecchio.</div>
+      </div>
+    </div>
+    <div class="front">
+      <div class="front__num">02<span>.</span></div>
+      <div>
+        <div class="front__label">Privacy e sicurezza</div>
+        <div class="front__body">Non sono temi negoziabili. <b>Certi dati non devono uscire da casa</b>.</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="closing">Non è tifoseria. È <b>lo strumento giusto per il contesto giusto</b>.</p>
+
+  <div class="footer">
+    <span>strumento giusto · contesto giusto</span>
+    <span class="arrow">▶</span>
+  </div>
+</div>
+</body>
+</html>

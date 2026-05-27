@@ -1,0 +1,17 @@
+{
+  "name": "comnia-social",
+  "version": "1.0.0",
+  "description": "Generatore di contenuti social (caroselli, post, story) per COMNIA — HTML/CSS → PNG via puppeteer.",
+  "private": true,
+  "scripts": {
+    "export": "node scripts/export.js",
+    "preview": "node scripts/preview.js",
+    "canva-upload": "node scripts/canva-upload.js",
+    "canva-png-upload": "node scripts/canva-png-upload.js"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.3.0",
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^23.0.0"
+  }
+}

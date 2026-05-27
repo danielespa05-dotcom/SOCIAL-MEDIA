@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<title>WhatsApp — Caricabatterie EV</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #162983; }
+  .canvas {
+    width: 1500px;
+    height: 785px;
+    background-color: #162983;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Pattern decorativo: griglia di puntini sottili */
+  .canvas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.10) 1.6px, transparent 1.6px);
+    background-size: 28px 28px;
+    background-position: 0 0;
+    z-index: 1;
+  }
+  /* Disco bianco "vassoio" per la foto */
+  .stage {
+    position: relative;
+    z-index: 2;
+    width: 620px;
+    height: 620px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 14px rgba(240,147,5,1);
+  }
+  .photo {
+    width: 520px;
+    height: 520px;
+    object-fit: contain;
+    object-position: center;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="stage">
+      <img class="photo" src="./caricabatterie.jpg" alt="" />
+    </div>
+  </div>
+</body>
+</html>

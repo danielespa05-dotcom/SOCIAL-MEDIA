@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>4 ore libere — 05</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  --bg-dark: #0A0A0A;
+  --red-comnia: #C82B2B;
+  --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slide {
+  width: 1080px;
+  height: 1350px;
+  background: var(--bg-dark);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 90px;
+  height: auto;
+}
+
+.setup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 56px;
+}
+
+.line {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.line strong {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.divider {
+  width: 56px;
+  height: 4px;
+  background: var(--red-comnia);
+  border-radius: 0;
+  margin-bottom: 56px;
+}
+
+.punch {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.punch .keyword {
+  color: var(--red-comnia);
+}
+
+.bottom {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+}
+
+.arrow-text {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.arrow-text .arrow {
+  color: var(--red-comnia);
+  font-style: normal;
+  margin-left: 6px;
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <img class="logo" src="../../brand/assets/logo-white.png" alt="Comnia">
+
+  <div class="setup">
+    <p class="line">Automatizzi per <strong>guadagnare tempo.</strong></p>
+    <p class="line">Con quel tempo <strong>automatizzi ancora.</strong></p>
+    <p class="line">Finché un giorno ti svegli e realizzi</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <p class="punch">
+    che ti sei reso<br>
+    <span class="keyword">sostituibile</span><br>
+    a forza di essere<br>efficiente.
+  </p>
+
+  <div class="bottom">
+    <p class="arrow-text">continua<span class="arrow">▶</span></p>
+  </div>
+</div>
+</body>
+</html>
