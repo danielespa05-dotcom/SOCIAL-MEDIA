@@ -1,5 +1,10 @@
 node_modules/
 .DS_Store
 *.log
-export/*/
-!export/.gitkeep
+
+# Export finali (PNG/PDF/MP4) — generati da export.js, non servono in git
+clients/*/export/*/
+!clients/*/export/.gitkeep
+
+# Preview HTML — generati da preview.js
+clients/*/preview/*.html
